@@ -136,14 +136,20 @@ function App() {
 										<div className="flex h-[132px] items-center w-full ml-[28px]">
 											<h1
 												id="js-minutes"
-												className="w-[132px]"
+												className="w-[132px] flex justify-end"
 											>
 												{`${remainingTime.minutes}`.padStart(
 													2,
 													"0"
 												)}
 											</h1>
-											<h1 className="w-auto">:</h1>
+											{settings.font != "space" ? (
+												<h1 className="w-auto mx-2">
+													:
+												</h1>
+											) : (
+												<h1 className="w-auto">:</h1>
+											)}
 											<h1
 												id="js-seconds"
 												className="w-[170px]"
