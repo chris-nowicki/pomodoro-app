@@ -1,0 +1,195 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+	--red: hsl(0, 91%, 71%);
+	--blue: hsl(182, 91%, 71%);
+	--purple: hsl(284, 89%, 74%);
+	--kumbh: "Kumbh Sans", sans-serif;
+	--roboto: "Roboto Slab", serif;
+	--space: "Space Mono", monospace;
+}
+
+.modeMenu {
+	background-color: #161932;
+	border-radius: 31.5px;
+	width: 373px;
+	height: 63px;
+	margin-top: 55px;
+	padding: 7px;
+}
+
+.button {
+	font-size: 14px;
+	line-height: 17px;
+	font-weight: bold;
+	color: #d7e0ff;
+	opacity: 0.4;
+	border-radius: 26.5px;
+	width: 120px;
+	height: 48px;
+}
+
+.active {
+	color: #1e213f;
+	opacity: 100;
+}
+
+.timer-container {
+	width: 410px;
+	height: 410px;
+	margin-top: 45px;
+	border-radius: 50%;
+	background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
+	box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
+}
+
+.circle {
+	width: 366px;
+	height: 366px;
+	border-radius: 50%;
+	background-color: #161932;
+}
+
+.progress-bar {
+	width: 339px;
+	height: 339px;
+	border-radius: 50%;
+	background-image: conic-gradient(var(--red) 0deg, #161932 0deg);
+}
+
+.clockContainer {
+	width: 312px;
+	height: 312px;
+	border-radius: 50%;
+	background-color: #161932;
+}
+
+.clockContainer h1 {
+	font-weight: bold;
+	font-size: 100px;
+	line-height: 120px;
+	letter-spacing: -5px;
+}
+
+.clockContainer h3 {
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 19px;
+	letter-spacing: 15px;
+	text-transform: uppercase;
+}
+
+.settings {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 25px;
+}
+
+.settings h2 {
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 34px;
+}
+
+.settings h4 {
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 16px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+.settings label {
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 14px;
+	opacity: 0.4;
+}
+
+.settings input {
+	background: #eff1fa;
+	border-radius: 10px;
+	height: 48px;
+	width: 140px;
+	padding: 16px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #1e213f;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
+.fontButton {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #eff1fa;
+}
+
+.fontButton-active {
+	background-color: #161932;
+	opacity: 100;
+}
+
+.font {
+	font-size: 15px;
+	opacity: 0.73;
+	line-height: 20px;
+	font-weight: 400;
+	color: #161932;
+}
+
+.font-active {
+	background-color: #161932;
+	opacity: 100;
+	color: white;
+}
+
+.kumbh-font {
+	font-family: var(--kumbh);
+}
+.roboto-font {
+	font-family: var(--roboto);
+}
+.space-font {
+	font-family: var(--space);
+}
+
+.colorButton {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.colorButton-red {
+	background-color: var(--red);
+}
+.colorButton-blue {
+	background-color: var(--blue);
+}
+.colorButton-purple {
+	background-color: var(--purple);
+}
+
+.apply {
+	position: absolute;
+	width: 140px;
+	height: 53px;
+	background-color: #f87070;
+	border-radius: 26.5px;
+}
+
+.apply h3 {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 20px;
+	color: white;
+}
