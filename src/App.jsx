@@ -10,7 +10,7 @@ function App() {
 		pomodoro: 25,
 		shortBreak: 5,
 		longBreak: 15,
-		font: "kumbh",
+		font: { family: "kumbh", weight: 700 },
 		color: "red",
 	})
 	const [showSettings, setShowSettings] = useState(false)
@@ -23,9 +23,21 @@ function App() {
 	})
 	const [countdown, setCountdown] = useState(null)
 	const [action, setAction] = useState("start")
+	const [matches, setMatches] = useState(false)
 
 	// assign variable to progress bar
-	let progressBar = document.getElementById("progress")
+	let progressBar = document.getElementsByTagName("circle")[0]
+
+	// check media query for progress bar
+	useEffect(() => {
+		const media = window.matchMedia("(max-width: 561px)")
+		if (media.matches !== matches) {
+			setMatches(media.matches)
+		}
+		const listener = () => setMatches(media.matches)
+		window.addEventListener("resize", listener)
+		return () => window.removeEventListener("resize", listener)
+	}, [matches])
 
 	// checks for when countdown is over and resets the clock
 	// auto changes mode to next mode based on settings
@@ -57,8 +69,9 @@ function App() {
 		// update currentMode and
 		setCurrentMode(mode)
 
-		// reset progress bar to 0 deg
-		progressBar.style.backgroundImage = `conic-gradient(#161932 ${0}deg, #161932 0deg)`
+		// reset progress bar
+
+		progressBar.style.strokeDashoffset = 1030
 
 		// update time remaining
 		setRemainingTime(calculateTime(settings[mode]))
@@ -77,15 +90,16 @@ function App() {
 
 	// starts the countdown timer and progress bar in the clock display
 	function startTimer() {
-		let progressValue = 360 / (settings[currentMode] * 60) // number of deg to increase progress bar by per each second
-		let progress = 0 // number to store current progress in deg
+		let progressValue = 1030 / (settings[currentMode] * 60) // number of deg to increase progress bar by per each second
+		let progress = 1030 // number to store current progress in deg
+		progressBar.style.stroke = `var(--${settings.color})`
 		let { total } = remainingTime // total time in seconds
 		const endTime = Date.parse(Date()) + total * 1000 // gets the end time to countdown to
 		setCountdown(
 			setInterval(function () {
 				setRemainingTime(countdownTime(endTime))
-				progress = progress + progressValue
-				progressBar.style.backgroundImage = `conic-gradient(var(--${settings.color}) ${progress}deg, #161932 0deg)`
+				progress = progress - progressValue
+				progressBar.style.strokeDashoffset = progress
 			}, 1000)
 		)
 	}
@@ -124,8 +138,9 @@ function App() {
 					{/* timer container */}
 					<div className="timer-container flex flex-col items-center justify-center">
 						{/* main circle */}
-						<div className="circle flex items-center justify-center">
+						<div className="relative circle flex items-center justify-center">
 							{/* progress bar */}
+<<<<<<< HEAD
 							<div
 								id="progress"
 								className="progress-bar flex items-center justify-center"
@@ -170,13 +185,49 @@ function App() {
 											</button>
 										</div>
 									</div>
+=======
+
+							<svg>
+								{!matches ? (
+									<circle cx="174" cy="174" r="163" />
+								) : (
+									<circle cx="124" cy="124" r="114" />
+								)}
+							</svg>
+							{/* end of progress circle */}
+
+							{/* clock container */}
+							<div className="clock-display flex flex-col items-center w-full z-10">
+								<div className="flex h-[132px] items-center w-full justify-center ml-[28px]">
+									<h1
+										id="js-minutes"
+										className="w-[132px] flex justify-end"
+									>
+										{`${remainingTime.minutes}`.padStart(
+											2,
+											"0"
+										)}
+									</h1>
+									<h1 className="w-auto">:</h1>
+									<h1 id="js-seconds" className="w-[170px]">
+										{`${remainingTime.seconds}`.padStart(
+											2,
+											"0"
+										)}
+									</h1>
+								</div>
+								<div className="flex flex-row w-full justify-center ml-4">
+									<button onClick={() => handleAction()}>
+										<h3>{action}</h3>
+									</button>
+>>>>>>> updatedProgressBar
 								</div>
 							</div>
 						</div>
 					</div>
 					{/* settings icon */}
 					<button onClick={() => setShowSettings(true)}>
-						<img src={settingsIcon} className="mt-[63px]" />
+						<img src={settingsIcon} className="sm:mt-[79px] md:mt-[63px]" />
 					</button>
 				</div>
 				{showSettings && (

@@ -3,8 +3,8 @@ import upArrow from "../../assets/icon-arrow-up.svg"
 import downArrow from "../../assets/icon-arrow-down.svg"
 
 const Input = React.forwardRef((props, ref) => (
-	<div className="flex flex-col mt-[22px] relative">
-		<label htmlFor="" className="text-[#1E213F] mb-[5px]">
+	<div className="relative flex sm:flex-row sm:items-center sm:justify-between md:mt-[22px] md:flex-col md:justify-start">
+		<label htmlFor="" className="sm:mt-[5px] md:mt-0 md:mb-[5px] text-[#1E213F]">
 			{props.name}
 		</label>
 		<div className="block">
@@ -15,7 +15,7 @@ const Input = React.forwardRef((props, ref) => (
 				ref={ref}
 				defaultValue={props.defaultValue}
 			/>
-			<div className="absolute flex flex-col right-[16px] top-10">
+			<div className="absolute right-[16px] flex flex-col sm:bottom-2 md:bottom-0  md:top-10">
 				<button
 					className="justify-end"
 					onClick={() => {

@@ -20,7 +20,7 @@ function SettingsMenu({
 	const handleApply = () => {
 		// clear interval
 		clearInterval(countdown)
-
+		console.log(font.weight)
 		// update settings state
 		setSettings({
 			pomodoro: Number(pomodoro.current.value),
@@ -30,9 +30,10 @@ function SettingsMenu({
 			color: color,
 		})
 
-		// change body font
-		let body = document.getElementsByTagName("BODY")[0].style
-		body.fontFamily = `var(--${font})`
+		// change body font family and font weight
+		let body = document.getElementsByTagName("body")[0].style
+		body.fontFamily = `var(--${font.family})`
+		body.fontWeight = font.weight
 
 		// change background colors for mode button and progress bar
 		let activeColor = document.getElementsByClassName("active")[0].style
@@ -55,18 +56,18 @@ function SettingsMenu({
 		// update remaining time on the clock display for current selected mode
 		updateRemainingTime(mode)
 
-		// reset progress bar to 0 degrees
-		let progressBar = document.getElementById("progress")
-		progressBar.style.backgroundImage = `conic-gradient(#161932 ${0}deg, #161932 0deg)`
+		// reset progress bar
+		let progressBar = document.getElementsByTagName("circle")[0]
+		progressBar.style.strokeDashoffset = 1030
 	}
 
 	return (
-		<div className="absolute flex flex-row justify-center items-center h-screen w-full">
-			<div className="relative flex flex-col w-[540px] h-[490px] items-center">
+		<div className="absolute flex flex-row justify-center items-center h-screen w-full z-30">
+			<div className="settings-container relative flex flex-col items-center">
 				{/* settings menu */}
-				<div className="settings flex flex-col w-full h-[464px] bg-white">
+				<div className="settings flex flex-col bg-white">
 					{/* header */}
-					<div className="flex w-full items-center justify-between mt-[34px] pb-[24px] border-b">
+					<div className="flex w-full items-center justify-between sm: mt-[24px] md:mt-[34px] sm:pb-[28px] md:pb-[24px] border-b">
 						<h2 className="text-[#161932] ml-[40px]">Settings</h2>
 						<button onClick={() => setShowSettings(false)}>
 							<img
@@ -78,11 +79,11 @@ function SettingsMenu({
 					</div>
 
 					{/* time settings */}
-					<div className="flex flex-col w-[462px] h-[109px] mt-[24px] ml-[40px] mb-[24px]">
-						<h4 className="text-[#161932]">time (minutes)</h4>
+					<div className="flex flex-col w-full md:w-[462px] md:h-[109px] mt-[24px] md:ml-[40px] md:mb-[24px]">
+						<h4 className="text-[#161932] sm:text-center sm:mb-[18px] md:mb-0">time (minutes)</h4>
 
 						{/* minute input fields for pomodoro, short break, and long break*/}
-						<div className="flex flex-row justify-between pb-[24px] border-b">
+						<div className="flex sm:flex-col md:flex-row justify-between sm:px-[24px] md:px-0 pb-[24px] border-b">
 							<Input
 								id="pomodoro"
 								name="pomodoro"
@@ -105,38 +106,44 @@ function SettingsMenu({
 					</div>
 
 					{/* font settings */}
-					<div className="flex flex-row items-center justify-between w-[462px] h-[109px] ml-[40px] py-[24px] border-b">
-						<h4 className="text-[#161932]">FONT</h4>
+					<div className="flex sm:flex-col md:flex-row items-center md:justify-between md:w-[462px] md:h-[109px] md:ml-[40px] py-[24px] border-b">
+						<h4 className="text-[#161932] sm:mb-[18px] md:mb-0">FONT</h4>
 						<div className="flex flex-row items-center justify-between w-[152px]">
 							<Button
 								buttonId="kumbh"
 								buttonClassProps="fontButton"
 								fontClassProps="kumbh-font"
 								type="font"
-								active={font}
-								onClick={() => setFont("kumbh")}
+								active={font.family}
+								onClick={() =>
+									setFont({ family: "kumbh", weight: 700 })
+								}
 							/>
 							<Button
 								buttonId="roboto"
 								buttonClassProps="fontButton"
 								fontClassProps="roboto-font"
 								type="font"
-								active={font}
-								onClick={() => setFont("roboto")}
+								active={font.family}
+								onClick={() =>
+									setFont({ family: "roboto", weight: 700 })
+								}
 							/>
 							<Button
 								buttonId="space"
 								buttonClassProps="fontButton"
 								fontClassProps="space-font"
 								type="font"
-								active={font}
-								onClick={() => setFont("space")}
+								active={font.family}
+								onClick={() =>
+									setFont({ family: "space", weight: 400 })
+								}
 							/>
 						</div>
 					</div>
 					{/* color settings */}
-					<div className="flex flex-row items-center justify-between w-[462px] h-[109px] ml-[40px] py-[24px]">
-						<h4 className="text-[#161932]">color</h4>
+					<div className="flex sm:flex-col md:flex-row items-center justify-between md:w-[462px] md:h-[109px] md:ml-[40px] sm:pt-[16px] md:py-[24px]">
+						<h4 className="text-[#161932] sm:pb-[18px]">color</h4>
 						<div className="flex flex-row items-center justify-between w-[152px]">
 							<Button
 								buttonId="red"

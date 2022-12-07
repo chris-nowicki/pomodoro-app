@@ -11,7 +11,6 @@ function Button({
 	onClick,
 }) {
 	const isActive = useActive(buttonId, active)
-	console.log(active)
 	let buttonClass
 	let fontClass
 
