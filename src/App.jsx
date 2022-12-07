@@ -140,52 +140,6 @@ function App() {
 						{/* main circle */}
 						<div className="relative circle flex items-center justify-center">
 							{/* progress bar */}
-<<<<<<< HEAD
-							<div
-								id="progress"
-								className="progress-bar flex items-center justify-center"
-							>
-								{/* clock container */}
-								<div className="clockContainer flex flex-col justify-center">
-									<div className="flex flex-col items-center w-full">
-										<div className="flex h-[132px] items-center w-full ml-[28px]">
-											<h1
-												id="js-minutes"
-												className="w-[132px] flex justify-end"
-											>
-												{`${remainingTime.minutes}`.padStart(
-													2,
-													"0"
-												)}
-											</h1>
-											{settings.font != "space" ? (
-												<h1 className="w-auto mx-2">
-													:
-												</h1>
-											) : (
-												<h1 className="w-auto">:</h1>
-											)}
-											<h1
-												id="js-seconds"
-												className="w-[170px]"
-											>
-												{`${remainingTime.seconds}`.padStart(
-													2,
-													"0"
-												)}
-											</h1>
-										</div>
-										<div className="flex flex-row w-full justify-center ml-4">
-											<button
-												onClick={() => handleAction()}
-											>
-												<h3 className="mt-[20px]">
-													{action}
-												</h3>
-											</button>
-										</div>
-									</div>
-=======
 
 							<svg>
 								{!matches ? (
@@ -220,7 +174,6 @@ function App() {
 									<button onClick={() => handleAction()}>
 										<h3>{action}</h3>
 									</button>
->>>>>>> updatedProgressBar
 								</div>
 							</div>
 						</div>
