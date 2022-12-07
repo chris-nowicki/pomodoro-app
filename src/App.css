@@ -24,7 +24,7 @@
 .button {
 	font-size: 14px;
 	line-height: 17px;
-	font-weight: bold;
+	font-weight: 700;
 	color: #d7e0ff;
 	opacity: 0.4;
 	border-radius: 26.5px;
@@ -53,28 +53,14 @@
 	background-color: #161932;
 }
 
-.progress-bar {
-	width: 339px;
-	height: 339px;
-	border-radius: 50%;
-	background-image: conic-gradient(var(--red) 0deg, #161932 0deg);
-}
-
-.clockContainer {
-	width: 312px;
-	height: 312px;
-	border-radius: 50%;
-	background-color: #161932;
-}
-
-.clockContainer h1 {
-	font-weight: bold;
+.clock-display h1 {
+	font-weight: 700;
 	font-size: 100px;
 	line-height: 120px;
 	letter-spacing: -5px;
 }
 
-.clockContainer h3 {
+.clock-display h3 {
 	font-weight: bold;
 	font-size: 16px;
 	line-height: 19px;
@@ -82,7 +68,15 @@
 	text-transform: uppercase;
 }
 
+.settings-container {
+	width: 540px;
+	height: 490px;
+}
+
+
 .settings {
+	width: 100%;
+	height: 464px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 25px;
 }
@@ -192,4 +186,104 @@ input::-webkit-inner-spin-button {
 	font-weight: 700;
 	line-height: 20px;
 	color: white;
+}
+
+circle {
+	fill: none;
+	stroke: var(--red);
+	stroke-width: 10px;
+	stroke-dasharray: 1030;
+	stroke-dashoffset: 1030;
+	stroke-linecap: round;
+}
+
+.circle svg {
+	position: absolute;
+	transform: rotate(-90deg);
+	height: 346px;
+	width: 346px;
+	z-index: 0;
+}
+
+@media (max-width: 561px) {
+	.modeMenu {
+		width: 327px;
+		height: 63px;
+		margin-top: 39px;
+		padding: 7px;
+	}
+	.button {
+		font-size: 12px;
+		line-height: 15px;
+		font-weight: 700;
+		width: 105.2px;
+	}
+	.timer-container {
+		width: 300px;
+		height: 300px;
+		background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
+		box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
+	}
+
+	.circle {
+		width: 267.8px;
+		height: 267.8px;
+	}
+
+	.circle svg {
+		width: 248px;
+		height: 248px;
+	}
+
+	.clock-display h1 {
+	font-weight: 700;
+	font-size: 80px;
+	line-height: 99.22px;
+	letter-spacing: -4px;
+}
+
+.clock-display h3 {
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 19px;
+	letter-spacing: 15px;
+	text-transform: uppercase;
+	margin-top: 12.06;
+}
+
+.settings-container {
+	width: 327px;
+	height: 607px;
+}
+
+.settings {
+	width: 100%;
+	height: 581px;
+	border-radius: 15px;
+}
+
+.settings h2 {
+	font-size: 20px;
+	line-height: 24.8px;
+}
+
+.settings h4 {
+	font-weight: bold;
+	font-size: 11px;
+	line-height: 14px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+.settings input {
+	background: #eff1fa;
+	border-radius: 10px;
+	height: 40px;
+	width: 140px;
+	padding: 16px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #1e213f;
+}
+
 }
