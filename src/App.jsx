@@ -140,7 +140,6 @@ function App() {
 						{/* main circle */}
 						<div className="relative circle flex items-center justify-center">
 							{/* progress bar */}
-<<<<<<< HEAD
 							<div
 								id="progress"
 								className="progress-bar flex items-center justify-center"
@@ -185,42 +184,6 @@ function App() {
 											</button>
 										</div>
 									</div>
-=======
-
-							<svg>
-								{!matches ? (
-									<circle cx="174" cy="174" r="163" />
-								) : (
-									<circle cx="124" cy="124" r="114" />
-								)}
-							</svg>
-							{/* end of progress circle */}
-
-							{/* clock container */}
-							<div className="clock-display flex flex-col items-center w-full z-10">
-								<div className="flex h-[132px] items-center w-full justify-center ml-[28px]">
-									<h1
-										id="js-minutes"
-										className="w-[132px] flex justify-end"
-									>
-										{`${remainingTime.minutes}`.padStart(
-											2,
-											"0"
-										)}
-									</h1>
-									<h1 className="w-auto">:</h1>
-									<h1 id="js-seconds" className="w-[170px]">
-										{`${remainingTime.seconds}`.padStart(
-											2,
-											"0"
-										)}
-									</h1>
-								</div>
-								<div className="flex flex-row w-full justify-center ml-4">
-									<button onClick={() => handleAction()}>
-										<h3>{action}</h3>
-									</button>
->>>>>>> updatedProgressBar
 								</div>
 							</div>
 						</div>
