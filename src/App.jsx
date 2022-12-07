@@ -175,7 +175,7 @@ function App() {
 										)}
 									</h1>
 								</div>
-								<div className="flex flex-row w-full justify-center ml-4 mt-[24px]">
+								<div className="flex flex-row w-full justify-center ml-4 sm:mt-[18px] md:mt-[24px]">
 									<button onClick={() => handleAction()}>
 										<h3>{action}</h3>
 									</button>
