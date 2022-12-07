@@ -20,7 +20,7 @@ function SettingsMenu({
 	const handleApply = () => {
 		// clear interval
 		clearInterval(countdown)
-		console.log(font.weight)
+
 		// update settings state
 		setSettings({
 			pomodoro: Number(pomodoro.current.value),

@@ -24,6 +24,7 @@ function App() {
 	const [countdown, setCountdown] = useState(null)
 	const [action, setAction] = useState("start")
 	const [matches, setMatches] = useState(false)
+	const [storedProgress, setStoredProgress] = useState(1030)
 
 	// assign variable to progress bar
 	let progressBar = document.getElementsByTagName("circle")[0]
@@ -45,6 +46,7 @@ function App() {
 	useEffect(() => {
 		if (remainingTime.total <= 0) {
 			clearInterval(countdown)
+			setStoredProgress(1030)
 			if (currentMode === "pomodoro") {
 				setCurrentMode("shortBreak")
 				setRemainingTime(calculateTime(settings.shortBreak))
@@ -89,21 +91,22 @@ function App() {
 	}
 
 	// starts the countdown timer and progress bar in the clock display
-	let progressValue
 	function startTimer() {
+		let progressIncrement
 		if (!matches) {
-			progressValue = 1030 / (settings[currentMode] * 60) // number of deg to increase progress bar by per each second
+			progressIncrement = 1030 / (settings[currentMode] * 60) // number of deg to increase progress bar by per each second
 		} else {
-			progressValue = 714 / (settings[currentMode] * 60) // number of deg to increase progress bar by per each second
+			progressIncrement = 714 / (settings[currentMode] * 60) // number of deg to increase progress bar by per each second
 		}
-		let progress = 1030 // number to store current progress in deg
 		progressBar.style.stroke = `var(--${settings.color})`
 		let { total } = remainingTime // total time in seconds
 		const endTime = Date.parse(Date()) + total * 1000 // gets the end time to countdown to
+		let progress = storedProgress
 		setCountdown(
 			setInterval(function () {
 				setRemainingTime(countdownTime(endTime))
-				progress = progress - progressValue
+				progress = progress - progressIncrement
+				setStoredProgress(progress)
 				progressBar.style.strokeDashoffset = progress
 			}, 1000)
 		)
@@ -143,7 +146,7 @@ function App() {
 					{/* timer container */}
 					<div className="timer-container flex flex-col items-center justify-center">
 						{/* main circle */}
-						<div className="relative circle flex items-center justify-center">
+						<div className="circle relative flex items-center justify-center">
 							{/* progress bar */}
 
 							<svg>
@@ -156,18 +159,20 @@ function App() {
 							{/* end of progress circle */}
 
 							{/* clock container */}
-							<div className="clock-display flex flex-col items-center w-full z-10">
-								<div className="flex h-[132px] items-center w-full justify-center ml-[48px]">
+							<div className="clock-display z-10 flex w-full flex-col items-center">
+								<div className="flex h-[132px] w-full items-center justify-center sm:ml-[38px] md:ml-[48px]">
 									<h1
 										id="js-minutes"
-										className="w-[132px] flex justify-end"
+										className="flex w-[132px] justify-end"
 									>
 										{`${remainingTime.minutes}`.padStart(
 											2,
 											"0"
 										)}
 									</h1>
-									<h1 id="js-colon" className="w-auto">:</h1>
+									<h1 id="js-colon" className="w-auto">
+										:
+									</h1>
 									<h1 id="js-seconds" className="w-[180px]">
 										{`${remainingTime.seconds}`.padStart(
 											2,
@@ -175,7 +180,7 @@ function App() {
 										)}
 									</h1>
 								</div>
-								<div className="flex flex-row w-full justify-center ml-4 sm:mt-[18px] md:mt-[24px]">
+								<div className="ml-4 flex w-full flex-row justify-center md:mt-[24px]">
 									<button onClick={() => handleAction()}>
 										<h3>{action}</h3>
 									</button>
@@ -185,7 +190,10 @@ function App() {
 					</div>
 					{/* settings icon */}
 					<button onClick={() => setShowSettings(true)}>
-						<img src={settingsIcon} className="sm:mt-[79px] md:mt-[63px]" />
+						<img
+							src={settingsIcon}
+							className="sm:mt-[79px] md:mt-[63px]"
+						/>
 					</button>
 				</div>
 				{showSettings && (
