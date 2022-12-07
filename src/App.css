@@ -55,9 +55,9 @@
 
 .clock-display h1 {
 	font-weight: 700;
-	font-size: 100px;
+	font-size: 90px;
 	line-height: 120px;
-	letter-spacing: -5px;
+	letter-spacing: 0px;
 }
 
 .clock-display h3 {
@@ -237,9 +237,9 @@ circle {
 
 	.clock-display h1 {
 	font-weight: 700;
-	font-size: 80px;
+	font-size: 65px;
 	line-height: 99.22px;
-	letter-spacing: -4px;
+	letter-spacing: 0px;
 }
 
 .clock-display h3 {

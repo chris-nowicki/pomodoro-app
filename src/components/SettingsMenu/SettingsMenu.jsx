@@ -31,9 +31,12 @@ function SettingsMenu({
 		})
 
 		// change body font family and font weight
-		let body = document.getElementsByTagName("body")[0].style
-		body.fontFamily = `var(--${font.family})`
-		body.fontWeight = font.weight
+		document.getElementsByTagName(
+			"body"
+		)[0].style.fontFamily = `var(--${font.family})`
+		document.getElementById("js-minutes").style.fontWeight = font.weight
+		document.getElementById("js-colon").style.fontWeight = font.weight
+		document.getElementById("js-seconds").style.fontWeight = font.weight
 
 		// change background colors for mode button and progress bar
 		let activeColor = document.getElementsByClassName("active")[0].style
@@ -62,13 +65,13 @@ function SettingsMenu({
 	}
 
 	return (
-		<div className="absolute flex flex-row justify-center items-center h-screen w-full z-30">
+		<div className="absolute z-30 flex h-screen w-full flex-row items-center justify-center">
 			<div className="settings-container relative flex flex-col items-center">
 				{/* settings menu */}
 				<div className="settings flex flex-col bg-white">
 					{/* header */}
-					<div className="flex w-full items-center justify-between sm: mt-[24px] md:mt-[34px] sm:pb-[28px] md:pb-[24px] border-b">
-						<h2 className="text-[#161932] ml-[40px]">Settings</h2>
+					<div className="sm: mt-[24px] flex w-full items-center justify-between border-b sm:pb-[28px] md:mt-[34px] md:pb-[24px]">
+						<h2 className="ml-[40px] text-[#161932]">Settings</h2>
 						<button onClick={() => setShowSettings(false)}>
 							<img
 								src={closeIcon}
@@ -79,11 +82,13 @@ function SettingsMenu({
 					</div>
 
 					{/* time settings */}
-					<div className="flex flex-col w-full md:w-[462px] md:h-[109px] mt-[24px] md:ml-[40px] md:mb-[24px]">
-						<h4 className="text-[#161932] sm:text-center sm:mb-[18px] md:mb-0">time (minutes)</h4>
+					<div className="mt-[24px] flex w-full flex-col md:ml-[40px] md:mb-[24px] md:h-[109px] md:w-[462px]">
+						<h4 className="text-[#161932] sm:mb-[18px] sm:text-center md:mb-0">
+							time (minutes)
+						</h4>
 
 						{/* minute input fields for pomodoro, short break, and long break*/}
-						<div className="flex sm:flex-col md:flex-row justify-between sm:px-[24px] md:px-0 pb-[24px] border-b">
+						<div className="flex justify-between border-b pb-[24px] sm:flex-col sm:px-[24px] md:flex-row md:px-0">
 							<Input
 								id="pomodoro"
 								name="pomodoro"
@@ -106,9 +111,11 @@ function SettingsMenu({
 					</div>
 
 					{/* font settings */}
-					<div className="flex sm:flex-col md:flex-row items-center md:justify-between md:w-[462px] md:h-[109px] md:ml-[40px] py-[24px] border-b">
-						<h4 className="text-[#161932] sm:mb-[18px] md:mb-0">FONT</h4>
-						<div className="flex flex-row items-center justify-between w-[152px]">
+					<div className="flex items-center border-b py-[24px] sm:flex-col md:ml-[40px] md:h-[109px] md:w-[462px] md:flex-row md:justify-between">
+						<h4 className="text-[#161932] sm:mb-[18px] md:mb-0">
+							FONT
+						</h4>
+						<div className="flex w-[152px] flex-row items-center justify-between">
 							<Button
 								buttonId="kumbh"
 								buttonClassProps="fontButton"
@@ -142,9 +149,9 @@ function SettingsMenu({
 						</div>
 					</div>
 					{/* color settings */}
-					<div className="flex sm:flex-col md:flex-row items-center justify-between md:w-[462px] md:h-[109px] md:ml-[40px] sm:pt-[16px] md:py-[24px]">
+					<div className="flex items-center justify-between sm:flex-col sm:pt-[16px] md:ml-[40px] md:h-[109px] md:w-[462px] md:flex-row md:py-[24px]">
 						<h4 className="text-[#161932] sm:pb-[18px]">color</h4>
-						<div className="flex flex-row items-center justify-between w-[152px]">
+						<div className="flex w-[152px] flex-row items-center justify-between">
 							<Button
 								buttonId="red"
 								buttonClassProps="colorButton colorButton-red"

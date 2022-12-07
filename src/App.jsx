@@ -89,8 +89,13 @@ function App() {
 	}
 
 	// starts the countdown timer and progress bar in the clock display
+	let progressValue
 	function startTimer() {
-		let progressValue = 1030 / (settings[currentMode] * 60) // number of deg to increase progress bar by per each second
+		if (!matches) {
+			progressValue = 1030 / (settings[currentMode] * 60) // number of deg to increase progress bar by per each second
+		} else {
+			progressValue = 714 / (settings[currentMode] * 60) // number of deg to increase progress bar by per each second
+		}
 		let progress = 1030 // number to store current progress in deg
 		progressBar.style.stroke = `var(--${settings.color})`
 		let { total } = remainingTime // total time in seconds
@@ -152,7 +157,7 @@ function App() {
 
 							{/* clock container */}
 							<div className="clock-display flex flex-col items-center w-full z-10">
-								<div className="flex h-[132px] items-center w-full justify-center ml-[28px]">
+								<div className="flex h-[132px] items-center w-full justify-center ml-[48px]">
 									<h1
 										id="js-minutes"
 										className="w-[132px] flex justify-end"
@@ -162,15 +167,15 @@ function App() {
 											"0"
 										)}
 									</h1>
-									<h1 className="w-auto">:</h1>
-									<h1 id="js-seconds" className="w-[170px]">
+									<h1 id="js-colon" className="w-auto">:</h1>
+									<h1 id="js-seconds" className="w-[180px]">
 										{`${remainingTime.seconds}`.padStart(
 											2,
 											"0"
 										)}
 									</h1>
 								</div>
-								<div className="flex flex-row w-full justify-center ml-4">
+								<div className="flex flex-row w-full justify-center ml-4 mt-[24px]">
 									<button onClick={() => handleAction()}>
 										<h3>{action}</h3>
 									</button>
