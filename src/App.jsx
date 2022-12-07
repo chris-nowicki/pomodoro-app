@@ -4,6 +4,7 @@ import settingsIcon from "./assets/icon-settings.svg"
 import SettingsMenu from "./components/SettingsMenu/SettingsMenu"
 import ModeButton from "./components/ModeButton"
 import { useRemainingTime } from "./components/hooks/useRemainingTime"
+import { useProgress } from "./components/hooks/useProgress"
 
 function App() {
 	const [settings, setSettings] = useState({
@@ -24,7 +25,12 @@ function App() {
 	const [countdown, setCountdown] = useState(null)
 	const [action, setAction] = useState("start")
 	const [matches, setMatches] = useState(false)
-	const [storedProgress, setStoredProgress] = useState(1030)
+	const { storedProgress, progressIncrement } = useProgress(
+		matches,
+		settings,
+		remainingTime,
+		currentMode
+	)
 
 	// assign variable to progress bar
 	let progressBar = document.getElementsByTagName("circle")[0]
@@ -34,8 +40,14 @@ function App() {
 		const media = window.matchMedia("(max-width: 561px)")
 		if (media.matches !== matches) {
 			setMatches(media.matches)
+		} else {
 		}
-		const listener = () => setMatches(media.matches)
+		const listener = () => {
+			setMatches(media.matches)
+			clearInterval(countdown)
+			setAction("start")
+			progressBar.style.strokeDashoffset = storedProgress
+		}
 		window.addEventListener("resize", listener)
 		return () => window.removeEventListener("resize", listener)
 	}, [matches])
@@ -46,7 +58,7 @@ function App() {
 	useEffect(() => {
 		if (remainingTime.total <= 0) {
 			clearInterval(countdown)
-			setStoredProgress(1030)
+			
 			if (currentMode === "pomodoro") {
 				setCurrentMode("shortBreak")
 				setRemainingTime(calculateTime(settings.shortBreak))
@@ -92,12 +104,6 @@ function App() {
 
 	// starts the countdown timer and progress bar in the clock display
 	function startTimer() {
-		let progressIncrement
-		if (!matches) {
-			progressIncrement = 1030 / (settings[currentMode] * 60) // number of deg to increase progress bar by per each second
-		} else {
-			progressIncrement = 714 / (settings[currentMode] * 60) // number of deg to increase progress bar by per each second
-		}
 		progressBar.style.stroke = `var(--${settings.color})`
 		let { total } = remainingTime // total time in seconds
 		const endTime = Date.parse(Date()) + total * 1000 // gets the end time to countdown to
@@ -106,7 +112,6 @@ function App() {
 			setInterval(function () {
 				setRemainingTime(countdownTime(endTime))
 				progress = progress - progressIncrement
-				setStoredProgress(progress)
 				progressBar.style.strokeDashoffset = progress
 			}, 1000)
 		)
