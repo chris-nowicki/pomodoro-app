@@ -21,15 +21,6 @@ function SettingsMenu({
 		// clear interval
 		clearInterval(countdown)
 
-		// update settings state
-		setSettings({
-			pomodoro: Number(pomodoro.current.value),
-			shortBreak: Number(shortBreak.current.value),
-			longBreak: Number(longBreak.current.value),
-			font: font,
-			color: color,
-		})
-
 		// change body font family and font weight
 		document.getElementsByTagName(
 			"body"
@@ -37,6 +28,10 @@ function SettingsMenu({
 		document.getElementById("js-minutes").style.fontWeight = font.weight
 		document.getElementById("js-colon").style.fontWeight = font.weight
 		document.getElementById("js-seconds").style.fontWeight = font.weight
+		document
+			.getElementById("action-button")
+			.getElementsByTagName("h3")[0]
+			.classList.replace(`hover:text-app-${settings.color}`,`hover:text-app-${color}`)
 
 		// change background colors for mode button and progress bar
 		let activeColor = document.getElementsByClassName("active")[0].style
@@ -62,6 +57,15 @@ function SettingsMenu({
 		// reset progress bar
 		let progressBar = document.getElementsByTagName("circle")[0]
 		progressBar.style.strokeDashoffset = 1030
+
+		// update settings state
+		setSettings({
+			pomodoro: Number(pomodoro.current.value),
+			shortBreak: Number(shortBreak.current.value),
+			longBreak: Number(longBreak.current.value),
+			font: font,
+			color: color,
+		})
 	}
 
 	return (
@@ -73,11 +77,21 @@ function SettingsMenu({
 					<div className="sm: mt-[24px] flex w-full items-center justify-between border-b sm:pb-[28px] md:mt-[34px] md:pb-[24px]">
 						<h2 className="ml-[40px] text-[#161932]">Settings</h2>
 						<button onClick={() => setShowSettings(false)}>
-							<img
-								src={closeIcon}
-								alt="close menu"
+							{/* close icon */}
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="14"
+								height="14"
 								className="mr-[38px]"
-							/>
+							>
+								<path
+									fill="#1E213F"
+									fillRule="evenodd"
+									d="M11.95.636l1.414 1.414L8.414 7l4.95 4.95-1.414 1.414L7 8.414l-4.95 4.95L.636 11.95 5.586 7 .636 2.05 2.05.636 7 5.586l4.95-4.95z"
+									opacity=".5"
+									className="close"
+								/>
+							</svg>
 						</button>
 					</div>
 
@@ -181,7 +195,7 @@ function SettingsMenu({
 					className="apply bottom-0"
 					onClick={() => handleApply()}
 				>
-					<h3>Apply</h3>
+					<h3 className="">Apply</h3>
 				</button>
 			</div>
 		</div>

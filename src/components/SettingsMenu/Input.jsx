@@ -1,13 +1,14 @@
 import React from "react"
-import upArrow from "../../assets/icon-arrow-up.svg"
-import downArrow from "../../assets/icon-arrow-down.svg"
 
 const Input = React.forwardRef((props, ref) => (
 	<div className="relative flex sm:flex-row sm:items-center sm:justify-between md:mt-[22px] md:flex-col md:justify-start">
-		<label htmlFor="" className="sm:mt-[5px] md:mt-0 md:mb-[5px] text-[#1E213F]">
+		<label
+			htmlFor=""
+			className="text-[#1E213F] sm:mt-[5px] md:mt-0 md:mb-[5px]"
+		>
 			{props.name}
 		</label>
-		<div className="block">
+		<div className="block time">
 			<input
 				type="number"
 				name={props.id}
@@ -17,22 +18,34 @@ const Input = React.forwardRef((props, ref) => (
 			/>
 			<div className="absolute right-[16px] flex flex-col sm:bottom-2 md:bottom-0  md:top-10">
 				<button
-					className="justify-end"
+					className="time-button"
 					onClick={() => {
 						const input = document.getElementById(props.id)
 						input.stepUp()
 					}}
 				>
-					<img src={upArrow} alt="" className="mb-[9px]" />
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="14"
+						height="7"
+						className="time-button mb-[9px]"
+					>
+						<path className="stroke" d="M1 6l6-4 6 4" />
+					</svg>
 				</button>
 				<button
-					className="justify-end"
 					onClick={() => {
 						const input = document.getElementById(props.id)
 						input.stepDown()
 					}}
 				>
-					<img src={downArrow} alt="" />
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="14"
+						height="7"
+					>
+						<path className="stroke" d="M1 1l6 4 6-4" />
+					</svg>
 				</button>
 			</div>
 		</div>

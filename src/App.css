@@ -32,9 +32,17 @@
 	height: 48px;
 }
 
+.button:hover {
+	opacity: 1;
+}
+
 .active {
 	color: #1e213f;
 	opacity: 100;
+}
+
+.settings-button:hover .settings-icon {
+	opacity: 1;
 }
 
 .timer-container {
@@ -73,7 +81,6 @@
 	height: 490px;
 }
 
-
 .settings {
 	width: 100%;
 	height: 464px;
@@ -93,6 +100,10 @@
 	line-height: 16px;
 	letter-spacing: 5px;
 	text-transform: uppercase;
+}
+
+.settings-container:hover .close {
+	opacity: 1;
 }
 
 .settings label {
@@ -121,11 +132,27 @@ input::-webkit-inner-spin-button {
 	margin: 0;
 }
 
+.stroke {
+	fill: none;
+	stroke: #1e213f;
+	stroke-opacity: 0.25;
+	stroke-width: 2;
+}
+
+.time:hover .stroke {
+	stroke-opacity: 1;
+}
+
 .fontButton {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
 	background-color: #eff1fa;
+}
+
+.fontButton:hover {
+	outline: 1px solid #eff1fa;
+	outline-offset: 5px;
 }
 
 .fontButton-active {
@@ -163,6 +190,11 @@ input::-webkit-inner-spin-button {
 	border-radius: 50%;
 }
 
+.colorButton:hover {
+	outline: 1px solid #eff1fa;
+	outline-offset: 5px;
+}
+
 .colorButton-red {
 	background-color: var(--red);
 }
@@ -179,6 +211,10 @@ input::-webkit-inner-spin-button {
 	height: 53px;
 	background-color: #f87070;
 	border-radius: 26.5px;
+}
+
+.apply:hover {
+	background-color: #f98d8d;
 }
 
 .apply h3 {
@@ -236,54 +272,53 @@ circle {
 	}
 
 	.clock-display h1 {
-	font-weight: 700;
-	font-size: 60px;
-	line-height: 99.22px;
-	letter-spacing: 0px;
-}
+		font-weight: 700;
+		font-size: 60px;
+		line-height: 99.22px;
+		letter-spacing: 0px;
+	}
 
-.clock-display h3 {
-	font-weight: bold;
-	font-size: 16px;
-	line-height: 19px;
-	letter-spacing: 15px;
-	text-transform: uppercase;
-	margin-top: 12.06;
-}
+	.clock-display h3 {
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 19px;
+		letter-spacing: 15px;
+		text-transform: uppercase;
+		margin-top: 12.06;
+	}
 
-.settings-container {
-	width: 327px;
-	height: 607px;
-}
+	.settings-container {
+		width: 327px;
+		height: 607px;
+	}
 
-.settings {
-	width: 100%;
-	height: 581px;
-	border-radius: 15px;
-}
+	.settings {
+		width: 100%;
+		height: 581px;
+		border-radius: 15px;
+	}
 
-.settings h2 {
-	font-size: 20px;
-	line-height: 24.8px;
-}
+	.settings h2 {
+		font-size: 20px;
+		line-height: 24.8px;
+	}
 
-.settings h4 {
-	font-weight: bold;
-	font-size: 11px;
-	line-height: 14px;
-	letter-spacing: 5px;
-	text-transform: uppercase;
-}
+	.settings h4 {
+		font-weight: bold;
+		font-size: 11px;
+		line-height: 14px;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+	}
 
-.settings input {
-	background: #eff1fa;
-	border-radius: 10px;
-	height: 40px;
-	width: 140px;
-	padding: 16px;
-	font-size: 14px;
-	font-weight: 700;
-	color: #1e213f;
-}
-
+	.settings input {
+		background: #eff1fa;
+		border-radius: 10px;
+		height: 40px;
+		width: 140px;
+		padding: 16px;
+		font-size: 14px;
+		font-weight: 700;
+		color: #1e213f;
+	}
 }

@@ -8,7 +8,13 @@ module.exports = {
 			lg: "976px",
 			xl: "1440px",
 		},
-		extend: {},
+		extend: {
+			colors: {
+				"app-red": "#F87070",
+				"app-blue": "#70F3F8",
+				"app-purple": "#D881F8",
+			},
+		},
 	},
 	plugins: [],
 }
