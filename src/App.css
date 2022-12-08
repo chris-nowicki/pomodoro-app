@@ -10,6 +10,16 @@
 	--kumbh: "Kumbh Sans", sans-serif;
 	--roboto: "Roboto Slab", serif;
 	--space: "Space Mono", monospace;
+	--font-family: "Kumbh Sans", sans-serif;
+	--font-weight: 700;
+	--app-color: hsl(0, 91%, 71%);
+}
+
+body {
+	background-color: hsl(235, 35%, 18%);
+	color: #d7e0ff;
+	font-size: 32px;
+	font-family: var(--font-family);
 }
 
 .modeMenu {
@@ -37,6 +47,7 @@
 }
 
 .active {
+	background-color: var(--app-color);
 	color: #1e213f;
 	opacity: 100;
 }
@@ -62,7 +73,7 @@
 }
 
 .clock-display h1 {
-	font-weight: 700;
+	font-weight: var(--font-weight);
 	font-size: 90px;
 	line-height: 120px;
 	letter-spacing: 0px;
@@ -74,6 +85,18 @@
 	line-height: 19px;
 	letter-spacing: 15px;
 	text-transform: uppercase;
+}
+
+#action-button {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	letter-spacing: 15px;
+	text-transform: uppercase;
+}
+
+#action-button:hover {
+	color: var(--app-color)
 }
 
 .settings-container {
@@ -226,7 +249,7 @@ input::-webkit-inner-spin-button {
 
 circle {
 	fill: none;
-	stroke: var(--red);
+	stroke: var(--app-color);
 	stroke-width: 10px;
 	stroke-dasharray: 1030;
 	stroke-dashoffset: 1030;
@@ -278,12 +301,10 @@ circle {
 		letter-spacing: 0px;
 	}
 
-	.clock-display h3 {
-		font-weight: bold;
+	#action-button {
 		font-size: 16px;
 		line-height: 19px;
 		letter-spacing: 15px;
-		text-transform: uppercase;
 		margin-top: 12.06;
 	}
 

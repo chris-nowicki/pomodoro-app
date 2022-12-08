@@ -10,8 +10,8 @@ function App() {
 		pomodoro: 25,
 		shortBreak: 5,
 		longBreak: 15,
-		font: { family: "kumbh", weight: 700 },
-		color: "red",
+		font: { family: `"Kumbh Sans", sans-serif`, weight: 700 },
+		color: `hsl(0, 91%, 71%)`,
 	})
 	const [showSettings, setShowSettings] = useState(false)
 	const [currentMode, setCurrentMode] = useState("pomodoro")
@@ -30,9 +30,6 @@ function App() {
 		remainingTime,
 		currentMode
 	)
-
-	// assign variable to progress bar
-	// let progressBar = document.getElementsByTagName("circle")[0]
 
 	// check media query for progress bar
 	useEffect(() => {
@@ -58,7 +55,6 @@ function App() {
 	useEffect(() => {
 		if (remainingTime.total <= 0) {
 			clearInterval(countdown)
-
 			if (currentMode === "pomodoro") {
 				setCurrentMode("shortBreak")
 				setRemainingTime(calculateTime(settings.shortBreak))
@@ -89,6 +85,10 @@ function App() {
 
 		// update time remaining
 		setRemainingTime(calculateTime(settings[mode]))
+	}
+
+	const stopTimer = () => {
+		clearInterval(countdown)
 	}
 
 	// pause or start timer based on action selected in timer
@@ -191,9 +191,7 @@ function App() {
 										id="action-button"
 										onClick={() => handleAction()}
 									>
-										<h3 className="hover:text-app-red">
-											{action}
-										</h3>
+										{action}
 									</button>
 								</div>
 							</div>

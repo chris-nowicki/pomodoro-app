@@ -1,7 +1,7 @@
 import React from "react"
 import { useActive } from "./hooks/useActive"
 
-function ModeButton({ name, data, color, active, onClick }) {
+function ModeButton({ name, data, active, onClick }) {
 	const isActive = useActive(data, active)
 
 	let buttonClass
@@ -9,17 +9,14 @@ function ModeButton({ name, data, color, active, onClick }) {
 
 	if (isActive) {
 		buttonClass = "button active"
-		buttonStyle = { backgroundColor: `var(--${color})` }
 	} else {
 		buttonClass = "button"
-		buttonStyle = {}
 	}
 
 	return (
 		<>
 			<button
 				className={buttonClass}
-				style={buttonStyle}
 				onClick={() => onClick()}
 			>
 				{name}

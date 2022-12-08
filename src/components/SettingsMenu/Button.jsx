@@ -3,14 +3,14 @@ import checkIcon from "../../assets/icon-check.svg"
 import { useActive } from "../hooks/useActive"
 
 function Button({
-	buttonId,
+	data,
 	buttonClassProps,
 	fontClassProps,
 	type,
 	active,
 	onClick,
 }) {
-	const isActive = useActive(buttonId, active)
+	const isActive = useActive(data, active)
 	let buttonClass
 	let fontClass
 
@@ -25,7 +25,6 @@ function Button({
 	return (
 		<button
 			onClick={() => onClick()}
-			id={buttonId}
 			className={`${buttonClass} flex flex-row items-center justify-center`}
 		>
 			{/* font button Aa text */}

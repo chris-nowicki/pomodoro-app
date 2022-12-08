@@ -21,21 +21,11 @@ function SettingsMenu({
 		// clear interval
 		clearInterval(countdown)
 
-		// change body font family and font weight
-		document.getElementsByTagName(
-			"body"
-		)[0].style.fontFamily = `var(--${font.family})`
-		document.getElementById("js-minutes").style.fontWeight = font.weight
-		document.getElementById("js-colon").style.fontWeight = font.weight
-		document.getElementById("js-seconds").style.fontWeight = font.weight
-		document
-			.getElementById("action-button")
-			.getElementsByTagName("h3")[0]
-			.classList.replace(`hover:text-app-${settings.color}`,`hover:text-app-${color}`)
-
-		// change background colors for mode button and progress bar
-		let activeColor = document.getElementsByClassName("active")[0].style
-		activeColor.backgroundColor = `var(--${color})`
+		// change font family, font-weight, and color for app highlights
+		const root = document.documentElement.style
+		root.setProperty("--font-family", `${font.family}`)
+		root.setProperty("--font-weight", font.weight)
+		root.setProperty("--app-color", color)
 
 		// update remaining time for clock display
 		let mode
@@ -131,33 +121,42 @@ function SettingsMenu({
 						</h4>
 						<div className="flex w-[152px] flex-row items-center justify-between">
 							<Button
-								buttonId="kumbh"
+								data={`"Kumbh Sans", sans-serif`}
 								buttonClassProps="fontButton"
 								fontClassProps="kumbh-font"
 								type="font"
 								active={font.family}
 								onClick={() =>
-									setFont({ family: "kumbh", weight: 700 })
+									setFont({
+										family: `"Kumbh Sans", sans-serif`,
+										weight: 700,
+									})
 								}
 							/>
 							<Button
-								buttonId="roboto"
+								data={`"Roboto Slab", serif`}
 								buttonClassProps="fontButton"
 								fontClassProps="roboto-font"
 								type="font"
 								active={font.family}
 								onClick={() =>
-									setFont({ family: "roboto", weight: 700 })
+									setFont({
+										family: `"Roboto Slab", serif`,
+										weight: 700,
+									})
 								}
 							/>
 							<Button
-								buttonId="space"
+								data={`"Space Mono", monospace`}
 								buttonClassProps="fontButton"
 								fontClassProps="space-font"
 								type="font"
 								active={font.family}
 								onClick={() =>
-									setFont({ family: "space", weight: 400 })
+									setFont({
+										family: `"Space Mono", monospace`,
+										weight: 400,
+									})
 								}
 							/>
 						</div>
@@ -167,25 +166,25 @@ function SettingsMenu({
 						<h4 className="text-[#161932] sm:pb-[18px]">color</h4>
 						<div className="flex w-[152px] flex-row items-center justify-between">
 							<Button
-								buttonId="red"
+								data={`hsl(0, 91%, 71%)`}
 								buttonClassProps="colorButton colorButton-red"
 								type="color"
 								active={color}
-								onClick={() => setColor("red")}
+								onClick={() => setColor(`hsl(0, 91%, 71%)`)}
 							/>
 							<Button
-								buttonId="blue"
+								data={`hsl(182, 91%, 71%)`}
 								buttonClassProps="colorButton colorButton-blue"
 								type="color"
 								active={color}
-								onClick={() => setColor("blue")}
+								onClick={() => setColor(`hsl(182, 91%, 71%)`)}
 							/>
 							<Button
-								buttonId="purple"
+								data={`hsl(284, 89%, 74%)`}
 								buttonClassProps="colorButton colorButton-purple"
 								type="color"
 								active={color}
-								onClick={() => setColor("purple")}
+								onClick={() => setColor(`hsl(284, 89%, 74%)`)}
 							/>
 						</div>
 					</div>
