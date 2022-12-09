@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react"
-import closeIcon from "../../assets/icon-close.svg"
 import Input from "./Input"
 import Button from "./Button"
 
@@ -66,7 +65,7 @@ function SettingsMenu({
 					{/* header */}
 					<div className="sm: mt-[24px] flex w-full items-center justify-between border-b sm:pb-[28px] md:mt-[34px] md:pb-[24px]">
 						<h2 className="ml-[40px] text-[#161932]">Settings</h2>
-						<button onClick={() => setShowSettings(false)}>
+						<a onClick={() => setShowSettings(false)}>
 							{/* close icon */}
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +81,7 @@ function SettingsMenu({
 									className="close"
 								/>
 							</svg>
-						</button>
+						</a>
 					</div>
 
 					{/* time settings */}
