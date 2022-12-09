@@ -122,7 +122,7 @@ function App() {
 		<>
 			<div className="flex flex-row justify-center">
 				{/* pomodoro app container */}
-				<div className="flex flex-col items-center">
+				<main className="flex flex-col items-center">
 					<span className="mt-12">pomodoro</span>
 					{/* mode menu container */}
 					<div className="modeMenu z-20 flex flex-row items-center justify-evenly">
@@ -216,7 +216,7 @@ function App() {
 							/>
 						</svg>
 					</button>
-				</div>
+				</main>
 				{showSettings && (
 					<SettingsMenu
 						settings={settings}
