@@ -87,10 +87,6 @@ function App() {
 		setRemainingTime(calculateTime(settings[mode]))
 	}
 
-	const stopTimer = () => {
-		clearInterval(countdown)
-	}
-
 	// pause or start timer based on action selected in timer
 	const handleAction = () => {
 		if (action === "start") {
@@ -122,10 +118,10 @@ function App() {
 		<>
 			<div className="flex flex-row justify-center">
 				{/* pomodoro app container */}
-				<main className="flex flex-col items-center">
+				<div className="flex flex-col items-center">
 					<span className="mt-12">pomodoro</span>
 					{/* mode menu container */}
-					<div className="modeMenu z-20 flex flex-row items-center justify-evenly">
+					<nav className="modeMenu z-20 flex flex-row items-center justify-evenly">
 						<ModeButton
 							name="pomodoro"
 							data="pomodoro"
@@ -147,10 +143,10 @@ function App() {
 							active={currentMode}
 							onClick={() => updateMode("longBreak")}
 						/>
-					</div>
+					</nav>
 
 					{/* timer container */}
-					<div className="timer-container flex flex-col items-center justify-center">
+					<main className="timer-container flex flex-col items-center justify-center">
 						{/* main circle */}
 						<div className="circle relative flex items-center justify-center">
 							{/* progress bar */}
@@ -196,9 +192,9 @@ function App() {
 								</div>
 							</div>
 						</div>
-					</div>
+					</main>
 					{/* settings icon */}
-					<button
+					<a
 						onClick={() => setShowSettings(true)}
 						className="settings-button"
 					>
@@ -215,8 +211,8 @@ function App() {
 								className="settings-icon"
 							/>
 						</svg>
-					</button>
-				</main>
+					</a>
+				</div>
 				{showSettings && (
 					<SettingsMenu
 						settings={settings}
