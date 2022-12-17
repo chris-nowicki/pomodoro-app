@@ -1,22 +1,25 @@
 /* variables */
-@import 'vars.css';
-
+:root {
+    --font-family: 'Kumbh Sans', sans-serif;
+    --app-color: #f87070;
+    --font-weight: 700;
+    --letter-spacing: 0px;
+    --margin-left: 160px;
+    
+}
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
-
 * {
     margin: 0;
     padding: 0;
     font: inherit;
 }
-
 body {
     min-height: 100vh;
 }
-
 img,
 picture,
 svg,
@@ -24,14 +27,12 @@ video {
     display: block;
     max-width: 100%;
 }
-
 input,
 textarea,
 button,
 select {
     font: inherit;
 }
-
 body {
-    background-color: $bg-body;
+    background-color: #1e213f;
 }

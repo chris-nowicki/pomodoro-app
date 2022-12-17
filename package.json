@@ -7,7 +7,7 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "preview": "vite preview",
-        "build:css": "postcss src/**/**/*.css --replace",
+        "build:css": "postcss src/**/*.css --replace",
         "watch:css": "postcss src/**/**/*.css --replace -w"
     },
     "dependencies": {

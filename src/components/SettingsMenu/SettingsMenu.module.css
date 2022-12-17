@@ -38,6 +38,8 @@
     background-color: #ffffff;
     font-family: 'Kumbh Sans', sans-serif;
     font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
     font-family: var(--font-family);
 }
 .header {
@@ -106,6 +108,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    grid-gap: 16px;
+    grid-gap: 16px;
     grid-gap: 16px;
     grid-gap: 16px;
     gap: 16px;
