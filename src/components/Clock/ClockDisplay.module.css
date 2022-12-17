@@ -5,7 +5,6 @@
     --font-weight: 700;
     --letter-spacing: 0px;
     --margin-left: 160px;
-    
 }
 .clockDisplay {
     display: flex;
@@ -17,30 +16,15 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-family: 'Kumbh Sans', sans-serif;
     font-family: var(--font-family);
     font-style: normal;
-    font-weight: 700;
-    font-weight: 700;
-    font-weight: 700;
     font-weight: 700;
     font-weight: var(--font-weight);
     font-size: 100px;
     line-height: 100px;
     width: 100%;
     margin-top: 50px;
-    margin-left: 160px;
-    margin-left: 160px;
-    margin-left: 160px;
-    margin-left: 160px;
     margin-left: var(--margin-left);
-    letter-spacing: 0px;
-    letter-spacing: 0px;
-    letter-spacing: 0px;
-    letter-spacing: 0px;
     letter-spacing: var(--letter-spacing);
 }
 .minutes {
@@ -69,10 +53,6 @@
     cursor: pointer;
 }
 .button:hover {
-    color: #f87070;
-    color: #f87070;
-    color: #f87070;
-    color: #f87070;
     color: var(--app-color);
 }
 .startStop {
