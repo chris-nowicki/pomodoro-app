@@ -12,6 +12,7 @@
     border-radius: 26.5px;
     color: #d7e0ff;
     font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 700;
@@ -25,6 +26,7 @@
 }
 
 .active {
+    background-color: #f87070;
     background-color: #f87070;
     background-color: var(--app-color);
     color: var(--bg-body);
