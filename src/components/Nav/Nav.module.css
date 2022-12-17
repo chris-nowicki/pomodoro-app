@@ -8,7 +8,7 @@ nav {
     align-items: center;
     width: 373px;
     height: 63px;
-    background-color: $bg-app;
+    background-color: var(--bg-app);
     border-radius: 31.5px;
     margin-top: 47px;
     padding: 8px 7px 7px 7px;
