@@ -44,23 +44,22 @@
     margin-top: 34px;
     padding-bottom: 24px;
     border-bottom: 1px solid #e3e1e1;
+}
 
-    & span {
-        margin-left: 40px;
-        color: var(--bg-app);
+.header span {
+    margin-left: 40px;
+    color: var(--bg-app);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+}
 
-        font-style: normal;
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 35px;
-    }
-
-    & button {
-        margin-right: 38px;
-        cursor: pointer;
-        border: none;
-        background-color: transparent;
-    }
+.header button {
+    margin-right: 38px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
 }
 
 .timeSettings {
@@ -69,14 +68,15 @@
     width: 462px;
     height: 109px;
     margin: 24px 0px 24px 40px;
-    & span {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 13px;
-        line-height: 16px;
-        letter-spacing: 5px;
-        color: var(--bg-app);
-    }
+}
+
+.timeSettings span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 5px;
+    color: var(--bg-app);
 }
 
 .timeInput {
@@ -94,15 +94,15 @@
     padding: 24px 0;
     margin: 0px 38px 0px 40px;
     border-bottom: 1px solid #e3e1e1;
+}
 
-    & span {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 13px;
-        line-height: 16px;
-        letter-spacing: 5px;
-        color: var(--bg-app);
-    }
+.fontSettings span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 5px;
+    color: var(--bg-app);
 }
 
 .fontButtons {
@@ -118,15 +118,15 @@
     justify-content: space-between;
     padding-top: 24px;
     margin: 0px 38px 0px 40px;
+}
 
-    & span {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 13px;
-        line-height: 16px;
-        letter-spacing: 5px;
-        color: var(--bg-app);
-    }
+.colorSettings span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 5px;
+    color: var(--bg-app);
 }
 
 .apply {
