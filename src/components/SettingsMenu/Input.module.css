@@ -4,7 +4,6 @@
     --font-weight: 700;
     --letter-spacing: 0px;
     --margin-left: 160px;
-    
 }
 
 .timeInputWrapper {
@@ -13,21 +12,17 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 22px;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-family: 'Kumbh Sans', sans-serif;
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
     line-height: 14px;
-    mix-blend-mode: normal
+    mix-blend-mode: normal;
 }
 
 .timeInputWrapper label {
-        opacity: 0.4;
-    }
+    opacity: 0.4;
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -67,15 +62,11 @@ input {
     display: flex;
     flex-direction: column;
     grid-gap: 9px;
-    grid-gap: 9px;
-    grid-gap: 9px;
-    grid-gap: 9px;
-    gap: 9px;
     right: 16px;
-    top: 34px
+    top: 34px;
 }
 
 .timeInputButtons button {
-        border: none;
-        cursor: pointer;
-    }
+    border: none;
+    cursor: pointer;
+}
