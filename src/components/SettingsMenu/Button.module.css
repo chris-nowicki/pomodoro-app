@@ -46,9 +46,11 @@
 .red {
     background-color: #f87070;
 }
+
 .blue {
     background-color: #70f3f8;
 }
+
 .purple {
     background-color: #d881f8;
 }
@@ -57,10 +59,12 @@
     outline: 1px solid rgb(248, 112, 112, 0.5);
     outline-offset: 5px;
 }
+
 .blue:hover {
     outline: 1px solid rgb(112, 243, 248, 0.5);
     outline-offset: 5px;
 }
+
 .purple:hover {
     outline: 1px solid rgb(216, 129, 248, 0.5);
     outline-offset: 5px;

@@ -1,16 +1,20 @@
 /* variables */
-@import '../../styles/vars.css';
-
+:root {
+    --font-family: 'Kumbh Sans', sans-serif;
+    --app-color: #f87070;
+    --font-weight: 700;
+    --letter-spacing: 0px;
+    --margin-left: 160px;
+    
+}
 .footer {
     display: flex;
     justify-content: center;
-    margin-top: 63px;
-
-    & button {
+    margin-top: 63px
+}
+.footer button {
         background-color: none;
     }
-}
-
 .button {
     background-color: transparent;
     border: none;
@@ -18,8 +22,6 @@
     opacity: 0.5;
     margin-left: 10px;
 }
-
-
 .button:hover {
     opacity: 1;
 }

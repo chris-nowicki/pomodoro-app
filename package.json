@@ -7,8 +7,8 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "preview": "vite preview",
-        "build:css": "postcss src/**/**/*.css --base --dir dist",
-        "watch:css": "postcss src/**/**/*.css --base --dir dist -w"
+        "build:css": "postcss src/**/**/*.css --replace",
+        "watch:css": "postcss src/**/**/*.css --replace -w"
     },
     "dependencies": {
         "react": "^18.2.0",

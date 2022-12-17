@@ -1,40 +1,46 @@
 /* variables */
-@import '../../styles/vars.css';
-
+:root {
+    --font-family: 'Kumbh Sans', sans-serif;
+    --app-color: #f87070;
+    --font-weight: 700;
+    --letter-spacing: 0px;
+    --margin-left: 160px;
+    
+}
 .clockDisplay {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .time {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    font-family: 'Kumbh Sans', sans-serif;
     font-family: var(--font-family);
     font-style: normal;
+    font-weight: 700;
     font-weight: var(--font-weight);
     font-size: 100px;
     line-height: 100px;
     width: 100%;
     margin-top: 50px;
+    margin-left: 160px;
     margin-left: var(--margin-left);
+    letter-spacing: 0px;
     letter-spacing: var(--letter-spacing);
 }
-
 .minutes {
     display: flex;
     justify-content: flex-end;
     width: 20px;
     margin-right: 0px;
 }
-
 .seconds {
     width: 180px;
     margin-left: 0px;
 }
-
 .button {
     flex: row;
     justify-content: center;
@@ -47,24 +53,21 @@
     background-color: transparent;
     border: none;
 
-    color: $text-primary;
+    color: #d7e0ff;
     cursor: pointer;
 }
-
 .button:hover {
+    color: #f87070;
     color: var(--app-color);
 }
-
 .startStop {
     margin-top: 20px;
     margin-left: 20px;
 }
-
 .reset {
     margin-left: 5px;
     padding-top: 10px;
 }
-
 @media (max-width: 561px) {
     .time {
         font-size: 80px;

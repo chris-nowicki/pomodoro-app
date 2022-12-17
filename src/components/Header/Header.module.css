@@ -1,7 +1,14 @@
 /* variables */
-@import '../../styles/vars.css';
-
+:root {
+    --font-family: 'Kumbh Sans', sans-serif;
+    --app-color: #f87070;
+    --font-weight: 700;
+    --letter-spacing: 0px;
+    --margin-left: 160px;
+    
+}
 header {
+    font-family: 'Kumbh Sans', sans-serif;
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 700;
@@ -9,10 +16,9 @@ header {
     line-height: 40px;
     /* identical to box height */
     text-align: center;
-    color: $text-primary;
+    color: #d7e0ff;
     margin-top: 48px;
 }
-
 @media (max-width: 561px) {
     header {
         font-size: 24px;

@@ -1,4 +1,11 @@
-@import '../../styles/vars.css';
+:root {
+    --font-family: 'Kumbh Sans', sans-serif;
+    --app-color: #f87070;
+    --font-weight: 700;
+    --letter-spacing: 0px;
+    --margin-left: 160px;
+    
+}
 
 .timeInputWrapper {
     position: relative;
@@ -6,17 +13,18 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 22px;
+    font-family: 'Kumbh Sans', sans-serif;
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
     line-height: 14px;
-    mix-blend-mode: normal;
+    mix-blend-mode: normal
+}
 
-    & label {
+.timeInputWrapper label {
         opacity: 0.4;
     }
-}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -55,12 +63,13 @@ input {
     position: absolute;
     display: flex;
     flex-direction: column;
+    grid-gap: 9px;
     gap: 9px;
     right: 16px;
-    top: 34px;
+    top: 34px
+}
 
-    & button {
+.timeInputButtons button {
         border: none;
         cursor: pointer;
     }
-}

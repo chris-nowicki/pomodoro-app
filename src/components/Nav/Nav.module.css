@@ -1,6 +1,12 @@
 /* variables */
-@import '../../styles/vars.css';
-
+:root {
+    --font-family: 'Kumbh Sans', sans-serif;
+    --app-color: #f87070;
+    --font-weight: 700;
+    --letter-spacing: 0px;
+    --margin-left: 160px;
+    
+}
 nav {
     display: flex;
     flex-direction: row;
@@ -8,13 +14,12 @@ nav {
     align-items: center;
     width: 373px;
     height: 63px;
-    background-color: $bg-app;
+    background-color: #161932;
     border-radius: 31.5px;
     margin-top: 47px;
     padding: 8px 7px 7px 7px;
     z-index: 20;
 }
-
 @media (max-width: 561px) {
     nav {
         width: 327px;
