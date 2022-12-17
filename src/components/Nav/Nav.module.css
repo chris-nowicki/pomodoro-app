@@ -1,0 +1,23 @@
+/* variables */
+@import '../../styles/vars.css';
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 373px;
+    height: 63px;
+    background-color: $bg-app;
+    border-radius: 31.5px;
+    margin-top: 47px;
+    padding: 8px 7px 7px 7px;
+    z-index: 20;
+}
+
+@media (max-width: 561px) {
+    nav {
+        width: 327px;
+        padding: 8px 6.14px 7px 6.14px;
+    }
+}

@@ -1,0 +1,25 @@
+/* variables */
+@import '../../styles/vars.css';
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 63px;
+
+    & button {
+        background-color: none;
+    }
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+    margin-left: 10px;
+}
+
+
+.button:hover {
+    opacity: 1;
+}

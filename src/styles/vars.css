@@ -1,0 +1,15 @@
+:root {
+    --font-family: 'Kumbh Sans', sans-serif;
+    --app-color: #f87070;
+    --font-weight: 700;
+    --letter-spacing: 0px;
+    --margin-left: 160px;
+}
+
+$red: #f87070;
+$blue: #70f3f8;
+$purple: #d881f8;
+$white: #ffffff;
+$bg-body: #1e213f;
+$text-primary: #d7e0ff;
+$bg-app: #161932;

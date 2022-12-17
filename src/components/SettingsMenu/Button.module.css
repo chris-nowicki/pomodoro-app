@@ -1,0 +1,84 @@
+.kumbh {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.roboto {
+    font-family: 'Roboto Slab', serif;
+}
+
+.space {
+    font-family: 'Space Mono', monospace;
+}
+
+.fontButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eff1fa;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #1e213f;
+    mix-blend-mode: normal;
+    opacity: 0.73;
+    cursor: pointer;
+}
+
+.fontButton:hover {
+    outline: 1px solid #eff1fa;
+    outline-offset: 5px;
+}
+
+.fontActive {
+    font-weight: 700;
+    line-height: 19px;
+    color: #ffffff;
+    background-color: #161932;
+    opacity: 1;
+}
+
+.red {
+    background-color: #f87070;
+}
+.blue {
+    background-color: #70f3f8;
+}
+.purple {
+    background-color: #d881f8;
+}
+
+.red:hover {
+    outline: 1px solid rgb(248, 112, 112, 0.5);
+    outline-offset: 5px;
+}
+.blue:hover {
+    outline: 1px solid rgb(112, 243, 248, 0.5);
+    outline-offset: 5px;
+}
+.purple:hover {
+    outline: 1px solid rgb(216, 129, 248, 0.5);
+    outline-offset: 5px;
+}
+
+.colorButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #1e213f;
+    cursor: pointer;
+}

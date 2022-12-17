@@ -1,0 +1,32 @@
+@import '/Users/wix/Developer/front-end-mentor/pomodoro-app-v2/src/styles/vars.css';
+
+.button {
+    width: 120px;
+    height: 48px;
+    border-radius: 26.5px;
+    color: #d7e0ff;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    background-color: transparent;
+    border: none;
+    mix-blend-mode: normal;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.active {
+    background-color: var(--app-color);
+    color: var(--bg-body);
+    opacity: 100;
+}
+
+@media (max-width: 561px) {
+    .button {
+        width: 105.2px;
+        font: 12px;
+        line-height: 15px;
+    }
+}

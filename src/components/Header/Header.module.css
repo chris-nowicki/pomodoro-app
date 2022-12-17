@@ -1,0 +1,22 @@
+/* variables */
+@import '../../styles/vars.css';
+
+header {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    /* identical to box height */
+    text-align: center;
+    color: $text-primary;
+    margin-top: 48px;
+}
+
+@media (max-width: 561px) {
+    header {
+        font-size: 24px;
+        line-height: 30px;
+        margin-top: 32px;
+    }
+}
