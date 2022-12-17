@@ -1,10 +1,4 @@
-:root {
-    --font-family: 'Kumbh Sans', sans-serif;
-    --app-color: #f87070;
-    --font-weight: 700;
-    --letter-spacing: 0px;
-    --margin-left: 160px;
-}
+@import '../../styles/vars.css';
 
 .button {
     width: 120px;

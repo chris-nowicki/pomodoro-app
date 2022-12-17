@@ -1,21 +1,18 @@
 /* variables */
-:root {
-    --font-family: 'Kumbh Sans', sans-serif;
-    --app-color: #f87070;
-    --font-weight: 700;
-    --letter-spacing: 0px;
-    --margin-left: 160px;
-}
+@import '../../styles/vars.css';
+
 header {
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
+    /* identical to box height */
     text-align: center;
-    color: #d7e0ff;
+    color: var(--text-primary);
     margin-top: 48px;
 }
+
 @media (max-width: 561px) {
     header {
         font-size: 24px;

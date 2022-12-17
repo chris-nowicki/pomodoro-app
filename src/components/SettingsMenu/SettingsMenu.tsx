@@ -1,4 +1,3 @@
-import React from 'react'
 import { useContext, useState, useRef, MutableRefObject } from 'react'
 
 // Components

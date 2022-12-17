@@ -1,4 +1,3 @@
-import { useContext } from 'react'
 import checkIcon from '../../assets/icon-check.svg'
 
 // Styles
