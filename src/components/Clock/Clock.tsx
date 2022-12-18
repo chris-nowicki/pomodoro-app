@@ -7,7 +7,7 @@ import { StyleContext } from '../../contexts/StyleContext'
 import { TimerContext } from '../../contexts/TimerContext'
 
 // Styles
-import styles from './Clock.module.css'
+import styles from './Clock.module.scss'
 
 function Clock() {
     const { activeColor } = useContext(StyleContext)

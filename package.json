@@ -22,9 +22,9 @@
         "postcss": "^8.4.20",
         "postcss-cli": "^10.1.0",
         "postcss-import": "^15.1.0",
-        "postcss-preset-env": "^7.8.3",
         "precss": "^4.0.0",
         "prettier": "^2.8.1",
+        "sass": "^1.57.0",
         "typescript": "^4.9.3",
         "vite": "^4.0.0"
     }
