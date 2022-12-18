@@ -1,10 +1,6 @@
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,macos,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,macos,node
 
-### coding dojo ###
-chrisNowicki-proposal.txt
-getsomeburgers.pdf
-
 ### macOS ###
 # General
 .DS_Store
