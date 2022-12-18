@@ -1,5 +1,5 @@
 /* variables */
-@import '../../styles/vars.scss';
+@use "/src/styles/vars.scss" as *;
 
 .clockContainer {
     display: flex;
