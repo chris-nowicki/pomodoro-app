@@ -11,7 +11,7 @@ import SettingsMenu from '../components/SettingsMenu/SettingsMenu'
 import { TimerContext } from '../contexts/TimerContext'
 
 // Styles
-import styles from './Pomodoro.module.css'
+import styles from './Pomodoro.module.scss'
 
 function Pomodoro() {
     const { showSettings } = useContext(TimerContext)

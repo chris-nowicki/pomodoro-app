@@ -33,7 +33,6 @@ function SettingsMenu() {
     }
 
     const handleApplySettings = () => {
-        console.log(pomodoro)
         setTimeDuration({
             pomodoro: Number(pomodoro.current.value),
             shortBreak: Number(shortBreak.current.value),
