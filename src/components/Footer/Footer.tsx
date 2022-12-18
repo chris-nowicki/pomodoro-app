@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { TimerContext } from '../../contexts/TimerContext'
 
 // Styles
-import styles from './Footer.module.css'
+import styles from './Footer.module.scss'
 
 function Footer() {
     const { setShowSettings } = useContext(TimerContext)

@@ -1,5 +1,5 @@
 /* variables */
-@import '../../styles/vars.css';
+@use '/src/styles/vars' as *;
 
 header {
     font-family: var(--font-family);
@@ -8,7 +8,7 @@ header {
     font-size: 32px;
     line-height: 40px;
     text-align: center;
-    color: var(--text-primary);
+    color: $text-primary;
     margin-top: 48px;
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Styles
-import styles from './Input.module.css'
+import styles from './Input.module.scss'
 
 // Types
 interface InputProps {

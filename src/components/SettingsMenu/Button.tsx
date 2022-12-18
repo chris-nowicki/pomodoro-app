@@ -1,7 +1,7 @@
 import checkIcon from '../../assets/icon-check.svg'
 
 // Styles
-import styles from './Button.module.css'
+import styles from './Button.module.scss'
 
 // Types
 interface ButtonStyle {

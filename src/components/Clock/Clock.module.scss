@@ -1,5 +1,5 @@
 /* variables */
-@use "/src/styles/vars.scss" as *;
+@use '/src/styles/vars' as *;
 
 .clockContainer {
     display: flex;
@@ -34,7 +34,7 @@
     align-items: center;
     width: 366px;
     height: 366px;
-    background-color: var(--bg-app);
+    background-color: $bg-app;
     border-radius: 50%;
     font-family: var(--font-family);
     color: $text-primary;
@@ -60,7 +60,7 @@
         align-items: center;
         width: 267.8px;
         height: 267.8px;
-        background-color: var(--bg-app);
+        background-color: $bg-app;
         border-radius: 50%;
         font-family: var(--font-family);
         color: $text-primary;

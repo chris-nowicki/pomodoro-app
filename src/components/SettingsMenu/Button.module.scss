@@ -1,13 +1,15 @@
+@use '/src/styles/vars' as *;
+
 .kumbh {
-    font-family: 'Kumbh Sans', sans-serif;
+    font-family: $kumbh;
 }
 
 .roboto {
-    font-family: 'Roboto Slab', serif;
+    font-family: $roboto;
 }
 
 .space {
-    font-family: 'Space Mono', monospace;
+    font-family: $space;
 }
 
 .fontButton {
@@ -24,7 +26,7 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 20px;
-    color: #1e213f;
+    color: $darkBlue;
     mix-blend-mode: normal;
     opacity: 0.73;
     cursor: pointer;
@@ -38,19 +40,19 @@
 .fontActive {
     font-weight: 700;
     line-height: 19px;
-    color: #ffffff;
-    background-color: #161932;
+    color: $white;
+    background-color: $bg-app;
     opacity: 1;
 }
 
 .red {
-    background-color: #f87070;
+    background-color: $red;
 }
 .blue {
-    background-color: #70f3f8;
+    background-color: $cyan;
 }
 .purple {
-    background-color: #d881f8;
+    background-color: $purple;
 }
 
 .red:hover {
@@ -79,6 +81,6 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 20px;
-    color: #1e213f;
+    color: $darkBlue;
     cursor: pointer;
 }

@@ -1,6 +1,6 @@
 import ModeButton from './ModeButton'
 // Styles
-import styles from './Nav.module.css'
+import styles from './Nav.module.scss'
 
 function Nav() {
     const handleMode = () => {

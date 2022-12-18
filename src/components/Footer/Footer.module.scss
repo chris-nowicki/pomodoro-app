@@ -2,10 +2,10 @@
     display: flex;
     justify-content: center;
     margin-top: 63px;
-}
 
-.footer button {
-    background-color: none;
+    & button {
+        background-color: none;
+    }
 }
 
 .button {

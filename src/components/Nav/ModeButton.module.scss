@@ -1,10 +1,10 @@
-@import '../../styles/vars.css';
+@use '/src/styles/vars' as *;
 
 .button {
     width: 120px;
     height: 48px;
     border-radius: 26.5px;
-    color: #d7e0ff;
+    color: $text-primary;
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 700;
@@ -19,7 +19,7 @@
 
 .active {
     background-color: var(--app-color);
-    color: var(--bg-body);
+    color: $darkBlue;
     opacity: 100;
 }
 

@@ -1,5 +1,5 @@
 /* variables */
-@import '../styles/vars.css';
+@use 'vars' as *;
 
 *,
 *::before,
@@ -33,5 +33,5 @@ select {
 }
 
 body {
-    background-color: var(--bg-body);
+    background-color: $darkBlue;
 }

@@ -1,4 +1,4 @@
-@import '../../styles/vars.css';
+@use '/src/styles/vars' as *;
 
 .timeInputWrapper {
     position: relative;
@@ -34,7 +34,7 @@ input {
     padding: 16px;
     font-size: 14px;
     font-weight: 700;
-    color: #1e213f;
+    color: $darkBlue;
     border: none;
     margin-top: 8px;
     outline: none;
@@ -42,7 +42,7 @@ input {
 
 .stroke {
     fill: none;
-    stroke: #1e213f;
+    stroke: $darkBlue;
     stroke-opacity: 0.25;
     stroke-width: 2;
 }
@@ -58,9 +58,9 @@ input {
     gap: 9px;
     right: 16px;
     top: 34px;
-}
 
-.timeInputButtons button {
-    border: none;
-    cursor: pointer;
+    & button {
+        border: none;
+        cursor: pointer;
+    }
 }

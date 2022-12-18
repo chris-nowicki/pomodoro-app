@@ -3,7 +3,7 @@ import { convertMinutes, convertSeconds } from '../../utils/timeConversion'
 import { TimerContext } from '../../contexts/TimerContext'
 
 // Styles
-import styles from './ClockDisplay.module.css'
+import styles from './ClockDisplay.module.scss'
 
 function ClockDisplay({ remainingTime }: { remainingTime: number }) {
     const { isPlaying, handleStartStop, handleReset } = useContext(TimerContext)

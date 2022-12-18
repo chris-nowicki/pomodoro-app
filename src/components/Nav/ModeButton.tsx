@@ -8,7 +8,7 @@ import { TimerContext } from '../../contexts/TimerContext'
 import { ModeButtonProps } from '../../ts/types'
 
 // Styles
-import styles from './ModeButton.module.css'
+import styles from './ModeButton.module.scss'
 
 function ModeButton({ name, data }: ModeButtonProps) {
     const { mode, setMode } = useContext(TimerContext)
