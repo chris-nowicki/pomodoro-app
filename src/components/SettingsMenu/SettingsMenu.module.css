@@ -1,5 +1,4 @@
-/* variables */
-@import '../../styles/vars.css';
+@use '../../styles/vars.scss';
 
 .wrapper {
     display: flex;
@@ -94,16 +93,25 @@
     padding: 24px 0;
     margin: 0px 38px 0px 40px;
     border-bottom: 1px solid #e3e1e1;
+
+    & span {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 5px;
+        color: var(--bg-app);
+    }
 }
 
-.fontSettings span {
+/* .fontSettings span {
     font-style: normal;
     font-weight: 700;
     font-size: 13px;
     line-height: 16px;
     letter-spacing: 5px;
     color: var(--bg-app);
-}
+} */
 
 .fontButtons {
     display: flex;
