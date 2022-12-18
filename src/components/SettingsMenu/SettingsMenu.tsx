@@ -5,7 +5,7 @@ import Input from './Input'
 import Button from './Button'
 
 // Styles
-import styles from './SettingsMenu.module.css'
+import styles from './SettingsMenu.module.scss'
 
 // Context
 import { StyleContext } from '../../contexts/StyleContext'
