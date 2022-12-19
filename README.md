@@ -51,9 +51,8 @@ Users should be able to:
 
 ## My process
 
-1. Develop the look and feel of the site without the functionality of the application.
-  - This includes responsive design.
-3. Add in the functionality of the application
+1. Develop the look and feel of the site without the functionality of the application.  This includes the responsive design.
+3. Code the functionality of the application
 4. Refactor code into reusable components as either javascript utilities (*helper files*) or custom React Hooks.
 
 ### Built with
@@ -68,7 +67,7 @@ Users should be able to:
 I wanted to use this project to learn how to write in **TypeScript**, create custom **React Hooks**, and write css using **Sass**. There were also unexpected areas that I learned when it comes to using **React Context**.
 
 **Custom Hook**
-I wrote this useActive hook for the navigation buttons, and Font/Color settings buttons to check if the current selected button is active.
+I wrote the useActive hook for the navigation buttons and Font/Color settings buttons to check if the current selected button is active.
 
 ```js
 export function useActive(item: string, itemCompare: string): boolean {
@@ -78,10 +77,10 @@ export function useActive(item: string, itemCompare: string): boolean {
 }
 ```
 
-**Sass Mixin**
-I wrote this breakpoint mixin to reference across my css code for the responsible design. It takes in a `$size`(_string_) and references `$breakpoint-up` for which size to be using. This way I only need to make updates to the mixin and it will change throughout the project.
+**SCSS Mixin**
+I wrote this breakpoint mixin to reference across my css code for the responsible design. The mixin takes in a `$size`(_string_) and references `$breakpoint-up` for which size to use in the media query. This way I only need to make updates to the mixin and it will change throughout the project.
 
-```css
+```scss
 $breakpoint-up: (
     'mobile': 591px,
     'tablet': 1000px,
@@ -94,9 +93,9 @@ $breakpoint-up: (
 }
 ```
 
-**Example of CSS code referencing the mixin**
+**Example of SCSS code referencing the mixin**
 
-```css
+```scss
 /* variables */
 @use '/src/styles/vars' as *;
 @use '/src/styles/breakpoints' as *;
@@ -130,8 +129,12 @@ $breakpoint-up: (
 
 I want to continue to focus on a few things:
 
-1. sass css language and learn more about nesting, functions, and mixins.
+1. SCSS/SASS - Learn more about nesting, functions, and mixins.
 2. TypeScript - I learned so much in this project but I feel I have so much more to learn to become fluent.
+
+Additional Features I'd like to add into this project:
+[] - Create functionality to have the user select an option in settings to automatically have the short/long breaks start.
+[] - Create functionally to have the user choose how many pomodoro rotations until a long break occurs.  Typically 4 is used by default.
 
 ### Useful resources
 
