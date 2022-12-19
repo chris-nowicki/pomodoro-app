@@ -98,7 +98,7 @@ function SettingsMenu() {
                     {/* font settings */}
                     <div className={styles.fontSettings}>
                         <span>FONT</span>
-                        <div className={styles.fontButtons}>
+                        <div className={styles.buttons}>
                             <Button
                                 type='font'
                                 data='kumbh'
@@ -128,7 +128,7 @@ function SettingsMenu() {
                     {/* color settings */}
                     <div className={styles.colorSettings}>
                         <span>COLOR</span>
-                        <div className={styles.fontButtons}>
+                        <div className={styles.buttons}>
                             <Button
                                 type='color'
                                 data='red'

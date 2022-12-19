@@ -1,4 +1,5 @@
 @use '../../styles/vars' as *;
+@use '../../styles/breakpoints' as *;
 
 .wrapper {
     display: flex;
@@ -18,6 +19,11 @@
     align-items: center;
     width: 540px;
     height: 490px;
+
+    @include breakpoint(mobile) {
+        width: 327px;
+        height: 575px;
+    }
 }
 
 .container:hover .close {
@@ -27,22 +33,35 @@
 .settingsMenu {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+    max-width: 540px;
     height: 464px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     background-color: $white;
     font-family: var(--font-family);
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        height: 549px;
+        border-radius: 15px;
+    }
 }
 
 .header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 540px;
+    width: 100%;
     margin-top: 34px;
     padding-bottom: 24px;
     border-bottom: 1px solid #e3e1e1;
+
+    @include breakpoint(mobile) {
+        margin-top: 24px;
+        padding-bottom: 28px;
+    }
 
     & span {
         margin-left: 40px;
@@ -51,6 +70,12 @@
         font-weight: 700;
         font-size: 28px;
         line-height: 35px;
+
+        @include breakpoint(mobile) {
+            margin-left: 24px;
+            font-size: 20px;
+            line-height: 25px;
+        }
     }
 
     & button {
@@ -58,6 +83,10 @@
         cursor: pointer;
         border: none;
         background-color: transparent;
+
+        @include breakpoint(mobile) {
+            margin-right: 24px;
+        }
     }
 }
 
@@ -65,8 +94,12 @@
     display: flex;
     flex-direction: column;
     width: 462px;
-    height: 109px;
-    margin: 24px 0px 24px 40px;
+    margin: 24px 38px 0px 40px;
+
+    @include breakpoint(mobile) {
+        width: 280px;
+        margin: 23px 0px 0px 0px;
+    }
 
     & span {
         font-style: normal;
@@ -75,6 +108,13 @@
         line-height: 16px;
         letter-spacing: 5px;
         color: $bg-app;
+
+        @include breakpoint(mobile) {
+            font-size: 11px;
+            line-height: 14px;
+            text-align: center;
+            letter-spacing: 4.23077px;
+        }
     }
 }
 
@@ -84,15 +124,29 @@
     justify-content: space-between;
     border-bottom: 1px solid #e3e1e1;
     padding-bottom: 24px;
+    margin-top: 10px;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+    }
 }
 
 .fontSettings {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 24px 0;
+    width: 462px;
     margin: 0px 38px 0px 40px;
     border-bottom: 1px solid #e3e1e1;
+    padding: 24px 0px;
+
+    @include breakpoint(mobile) {
+        width: 280px;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0px;
+    }
 
     & span {
         font-style: normal;
@@ -101,22 +155,42 @@
         line-height: 16px;
         letter-spacing: 5px;
         color: $bg-app;
+
+        @include breakpoint(mobile) {
+            font-size: 11px;
+            line-height: 14px;
+            text-align: center;
+            letter-spacing: 4.23077px;
+        }
     }
 }
 
-.fontButtons {
+.buttons {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     gap: 16px;
+
+    @include breakpoint(mobile) {
+        margin-top: 18px;
+    }
 }
 
 .colorSettings {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 462px;
     padding-top: 24px;
     margin: 0px 38px 0px 40px;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        justify-content: center;
+        margin: 0px;
+        padding-top: 16px;
+    }
 
     & span {
         font-style: normal;
@@ -125,6 +199,13 @@
         line-height: 16px;
         letter-spacing: 5px;
         color: $bg-app;
+
+        @include breakpoint(mobile) {
+            font-size: 11px;
+            line-height: 14px;
+            text-align: center;
+            letter-spacing: 4.23077px;
+        }
     }
 }
 

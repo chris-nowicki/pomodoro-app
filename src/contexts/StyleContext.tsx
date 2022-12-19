@@ -4,6 +4,7 @@ import { createContext, useMemo } from 'react'
 import { StyleContextTypes } from '../ts/types'
 import { useLocalStorage } from '../hooks/useLocalStorage'
 
+// Create Context
 export const StyleContext = createContext<StyleContextTypes>({
     color: 'red',
     setColor: () => null,
@@ -18,6 +19,7 @@ export const StyleContext = createContext<StyleContextTypes>({
     },
 })
 
+// Style Provider
 export function StyleProvider({ children }: { children: JSX.Element }) {
     const [color, setColor] = useLocalStorage('color', 'red')
     const [font, setFont] = useLocalStorage('font', 'kumbh')
@@ -28,24 +30,24 @@ export function StyleProvider({ children }: { children: JSX.Element }) {
     const activeFont =
         font === 'kumbh'
             ? {
-                family: `"Kumbh Sans", sans-serif`,
-                weight: `700`,
-                letterSpacing: `-4px`,
-                marginLeft: `160px`,
-            }
+                  family: `"Kumbh Sans", sans-serif`,
+                  weight: `700`,
+                  letterSpacing: `-4px`,
+                  marginLeft: `160px`,
+              }
             : font === 'roboto'
             ? {
-                family: `"Roboto Slab", serif`,
-                weight: `700`,
-                letterSpacing: `0px`,
-                marginLeft: `160px`,
-            }
+                  family: `"Roboto Slab", serif`,
+                  weight: `700`,
+                  letterSpacing: `0px`,
+                  marginLeft: `160px`,
+              }
             : {
-                family: `"Space Mono", monospace`,
-                weight: `400`,
-                letterSpacing: `-10px`,
-                marginLeft: `155px`,
-            }
+                  family: `"Space Mono", monospace`,
+                  weight: `400`,
+                  letterSpacing: `-10px`,
+                  marginLeft: `155px`,
+              }
 
     document.documentElement.style.setProperty(
         '--font-family',

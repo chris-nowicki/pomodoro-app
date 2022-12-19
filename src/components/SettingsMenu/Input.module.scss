@@ -1,10 +1,10 @@
 @use '/src/styles/vars' as *;
+@use '/src/styles/breakpoints' as *;
 
 .timeInputWrapper {
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin-top: 22px;
     font-family: var(--font-family);
     font-style: normal;
@@ -12,10 +12,30 @@
     font-size: 12px;
     line-height: 14px;
     mix-blend-mode: normal;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 8px;
+        font-size: 12px;
+        line-height: 15px;
+        padding-bottom: 0px;
+    }
+
+    & label {
+        opacity: 0.4;
+    }
 }
 
-.timeInputWrapper label {
-    opacity: 0.4;
+.timeInput {
+    position: relative;
+    margin-top: 8px;
+
+    @include breakpoint(mobile) {
+        margin-top: 0px;
+    }
 }
 
 input::-webkit-outer-spin-button,
@@ -36,8 +56,12 @@ input {
     font-weight: 700;
     color: $darkBlue;
     border: none;
-    margin-top: 8px;
+    /* margin-top: 8px; */
     outline: none;
+
+    @include breakpoint(mobile) {
+        height: 40px;
+    }
 }
 
 .stroke {
@@ -57,7 +81,11 @@ input {
     flex-direction: column;
     gap: 9px;
     right: 16px;
-    top: 34px;
+    bottom: 12px;
+
+    @include breakpoint(mobile) {
+        bottom: 8px;
+    }
 
     & button {
         border: none;
