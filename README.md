@@ -40,9 +40,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./assets/README/screenshot-1.png)
+![](./src/assets/README/screenshot-1.png)
 
-![](./assets/README/screenshot-2.png)
+![](./src/assets/README/screenshot-2.png)
 
 ### Links
 
