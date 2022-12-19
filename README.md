@@ -18,7 +18,7 @@ This is a solution to the [Pomodoro app challenge on Frontend Mentor](https://ww
 
 ## Overview
 
-As a recent graduate from the [CodingDojo]http://www.codingdojo.com), with highest honors in **Python** & **MERN** stacks, I wanted to find projects to work on to add to my portfolio.
+As a recent graduate from the [CodingDojo](http://www.codingdojo.com), with highest honors in **Python** & **MERN** stacks, I wanted to find projects to work on to add to my portfolio.
 
 I am loving the challenges at FrontEnd Mentor.  You are provided with the challenge, minimum requirements, and any assets needed (to include Figma with payed professional plan).  The goal is to showcase my capabilities of bringing a website/application to life using professional designs.  
 
