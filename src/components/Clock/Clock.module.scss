@@ -1,5 +1,6 @@
 /* variables */
 @use '/src/styles/vars' as *;
+@use '/src/styles/breakpoints' as *;
 
 .clockContainer {
     display: flex;
@@ -12,6 +13,13 @@
     background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
     box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
     margin-top: 45px;
+    transition: all ease 0.3s;
+
+    @include breakpoint(mobile) {
+        width: 300px;
+        height: 300px;
+        margin-top: 48px;
+    }
 }
 
 .clockContainerMobile {
@@ -38,22 +46,18 @@
     border-radius: 50%;
     font-family: var(--font-family);
     color: $text-primary;
+    transition: all ease 0.3s;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .clockMobile {
     display: none;
-}
+    transition: all ease 0.3s;
 
-@media (max-width: 561px) {
-    .clockContainer {
-        width: 300px;
-        height: 300px;
-    }
-    .clockDesktop {
-        display: none;
-    }
-
-    .clockMobile {
+    @include breakpoint(mobile) {
         display: flex;
         direction: column;
         justify-content: center;

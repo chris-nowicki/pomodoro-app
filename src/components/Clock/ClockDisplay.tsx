@@ -25,8 +25,8 @@ function ClockDisplay({ remainingTime }: { remainingTime: number }) {
             <button className={`${styles.button} ${styles.reset}`} onClick={handleReset}>
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    width='32px'
-                    height='32px'
+                    // width='32px'
+                    // height='32px'
                     viewBox='0 0 512 512'
                 >
                     <title>Refresh</title>

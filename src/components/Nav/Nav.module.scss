@@ -1,5 +1,6 @@
 /* variables */
 @use '/src/styles/vars' as *;
+@use '/src/styles/breakpoints' as *;
 
 nav {
     display: flex;
@@ -13,11 +14,11 @@ nav {
     margin-top: 47px;
     padding: 8px 7px 7px 7px;
     z-index: 20;
-}
+    transition: all ease 0.3s;
 
-@media (max-width: 561px) {
-    nav {
+    @include breakpoint(mobile) {
         width: 327px;
         padding: 8px 6.14px 7px 6.14px;
+        margin-top: 39px;
     }
 }

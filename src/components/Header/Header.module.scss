@@ -1,5 +1,6 @@
 /* variables */
 @use '/src/styles/vars' as *;
+@use '/src/styles/breakpoints' as *;
 
 header {
     font-family: var(--font-family);
@@ -8,12 +9,15 @@ header {
     font-size: 32px;
     line-height: 40px;
     text-align: center;
-    color: $text-primary;
     margin-top: 48px;
-}
+    color: $text-primary;
+    transition: all ease .3s;
 
-@media (max-width: 561px) {
-    header {
+    @include breakpoint(tablet) {
+        margin-top: 80px;
+    }
+
+    @include breakpoint(mobile) {
         font-size: 24px;
         line-height: 30px;
         margin-top: 32px;
