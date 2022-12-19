@@ -56,6 +56,8 @@ Users should be able to:
 
 I wanted to use this project to learn how to write in **TypeScript**, create custom **React Hooks**, and write css using **Sass**. There were also unexpected areas that I learned when it comes to using **React Context**.
 
+**Custom Hook**
+I wrote this useActive hook for the navigation buttons, and Font/Color settings buttons to check if the current selected button is active.
 ```js
 export function useActive(item: string, itemCompare: string): boolean {
     if (item !== itemCompare) return false
@@ -63,6 +65,9 @@ export function useActive(item: string, itemCompare: string): boolean {
     return true
 }
 ```
+
+**Sass Mixin**
+I wrote this breakpoint mixin to reference across my css code for the responsible design.  It takes in a `$size`(*string*) and references `$breakpoint-up` for which size to be using.  This way I only need to make updates to the mixin and it will change throughout the project.
 
 ```css
 $breakpoint-up: (
@@ -77,6 +82,7 @@ $breakpoint-up: (
 }
 ```
 
+**Example of CSS code referencing the mixin**
 ```css
 /* variables */
 @use '/src/styles/vars' as *;
