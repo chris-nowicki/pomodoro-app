@@ -16,9 +16,13 @@ This is a solution to the [Pomodoro app challenge on Frontend Mentor](https://ww
 -   [Author](#author)
 -   [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
+
+As a recent graduate from the [CodingDojo]http://www.codingdojo.com), with highest honors in **Python** & **MERN** stacks, I wanted to find projects to work on to add to my portfolio.
+
+I am loving the challenges at FrontEnd Mentor.  You are provided with the challenge, minimum requirements, and any assets needed (to include Figma with payed professional plan).  The goal is to showcase my capabilities of bringing a website/application to life using professional designs.  
+
+Although this isn't a full-stack application, I liked the challenge of creating a [Pomodoro](https://todoist.com/productivity-methods/pomodoro-technique) app as it is a productivity tool I have been using for years and I learned a lot about working with time in *JavaScript*.
 
 ### The challenge
 
@@ -45,6 +49,11 @@ Users should be able to:
 
 ## My process
 
+1. Develop the look and feel of the site without the functionality of the application.
+  - This includes responsive design.
+3. Add in the functionality of the application
+4. Refactor code into reusable components as either javascript utilities (*helper files*) or custom React Hooks.
+
 ### Built with
 
 -   [Vitejs](https://vitejs.dev) - Development Environment
@@ -58,6 +67,7 @@ I wanted to use this project to learn how to write in **TypeScript**, create cus
 
 **Custom Hook**
 I wrote this useActive hook for the navigation buttons, and Font/Color settings buttons to check if the current selected button is active.
+
 ```js
 export function useActive(item: string, itemCompare: string): boolean {
     if (item !== itemCompare) return false
@@ -67,7 +77,7 @@ export function useActive(item: string, itemCompare: string): boolean {
 ```
 
 **Sass Mixin**
-I wrote this breakpoint mixin to reference across my css code for the responsible design.  It takes in a `$size`(*string*) and references `$breakpoint-up` for which size to be using.  This way I only need to make updates to the mixin and it will change throughout the project.
+I wrote this breakpoint mixin to reference across my css code for the responsible design. It takes in a `$size`(_string_) and references `$breakpoint-up` for which size to be using. This way I only need to make updates to the mixin and it will change throughout the project.
 
 ```css
 $breakpoint-up: (
@@ -83,6 +93,7 @@ $breakpoint-up: (
 ```
 
 **Example of CSS code referencing the mixin**
+
 ```css
 /* variables */
 @use '/src/styles/vars' as *;
@@ -112,16 +123,20 @@ $breakpoint-up: (
     }
 }
 ```
+
 ### Continued development
 
 I want to continue to focus on a few things:
+
 1. sass css language and learn more about nesting, functions, and mixins.
 2. TypeScript - I learned so much in this project but I feel I have so much more to learn to become fluent.
 
 ### Useful resources
 
--   [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
--   [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+-   [React/React Native Countdown Circle Timer](https://github.com/chris-nowicki/react-countdown-circle-timer) - Excellent repo that I used for the circle countdown progress bar.
+-   [Vite](https://vitejs.dev/)
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [React TypeScript Cheatsheets](https://react-typescript-cheatsheet.netlify.app/)
 
 ## Author
 
