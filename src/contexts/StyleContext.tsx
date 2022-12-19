@@ -27,27 +27,28 @@ export function StyleProvider({ children }: { children: JSX.Element }) {
     const activeColor =
         color === 'red' ? 'F87070' : color === 'blue' ? '70F3F8' : 'D881F8'
 
+    // prettier-ignore
     const activeFont =
         font === 'kumbh'
             ? {
-                  family: `"Kumbh Sans", sans-serif`,
-                  weight: `700`,
-                  letterSpacing: `-4px`,
-                  marginLeft: `160px`,
-              }
+                family: `"Kumbh Sans", sans-serif`,
+                weight: `700`,
+                letterSpacing: `-4px`,
+                marginLeft: `160px`,
+            }
             : font === 'roboto'
             ? {
-                  family: `"Roboto Slab", serif`,
-                  weight: `700`,
-                  letterSpacing: `0px`,
-                  marginLeft: `160px`,
-              }
+                family: `"Roboto Slab", serif`,
+                weight: `700`,
+                letterSpacing: `0px`,
+                marginLeft: `160px`,
+            }
             : {
-                  family: `"Space Mono", monospace`,
-                  weight: `400`,
-                  letterSpacing: `-10px`,
-                  marginLeft: `155px`,
-              }
+                family: `"Space Mono", monospace`,
+                weight: `400`,
+                letterSpacing: `-10px`,
+                marginLeft: `155px`,
+            }
 
     document.documentElement.style.setProperty(
         '--font-family',

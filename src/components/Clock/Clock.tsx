@@ -1,5 +1,7 @@
 import { useContext } from 'react'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
+
+// Components
 import ClockDisplay from './ClockDisplay'
 
 // Context
