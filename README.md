@@ -1,20 +1,20 @@
 # Frontend Mentor - Pomodoro app solution
 
-This is a solution to the [Pomodoro app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/pomodoro-app-KBFnycJ6G). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Pomodoro app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/pomodoro-app-KBFnycJ6G). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+-   [Overview](#overview)
+    -   [The challenge](#the-challenge)
+    -   [Screenshot](#screenshot)
+    -   [Links](#links)
+-   [My process](#my-process)
+    -   [Built with](#built-with)
+    -   [What I learned](#what-i-learned)
+    -   [Continued development](#continued-development)
+    -   [Useful resources](#useful-resources)
+-   [Author](#author)
+-   [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -24,13 +24,15 @@ This is a solution to the [Pomodoro app challenge on Frontend Mentor](https://ww
 
 Users should be able to:
 
-- Set a pomodoro timer and short & long break timers
-- Customize how long each timer runs for
-- See a circular progress bar that updates every minute and represents how far through their timer they are
-- Customize the appearance of the app with the ability to set preferences for colors and fonts
+-   Set a pomodoro timer and short & long break timers
+-   Customize how long each timer runs for
+-   See a circular progress bar that updates every minute and represents how far through their timer they are
+-   Customize the appearance of the app with the ability to set preferences for colors and fonts
 
 **I added one other feature**
-- Add a reset button to reset the timer
+
+-   Add a reset button to reset the timer
+-   Settings save to local storage
 
 ### Screenshot
 
@@ -38,65 +40,89 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [https://pomodoro.chrisnowicki.io](https://pomodoro.chriswix.com)
+-   Solution URL: [Add solution URL here](https://your-solution-url.com)
+-   Live Site URL: [https://pomodoro.chrisnowicki.io](https://pomodoro.chriswix.com)
 
 ## My process
 
 ### Built with
 
-- [Vitejs](https://vitejs.dev)
-- [React](https://reactjs.org/) - JS library
-- [Sass](https://sass-lang.com)
-- [TypeScript](https://www.typescriptlang.org/)
+-   [Vitejs](https://vitejs.dev) - Development Environment
+-   [React](https://reactjs.org/) - JS library
+-   [Sass](https://sass-lang.com) - CSS library
+-   [TypeScript](https://www.typescriptlang.org/) - JS Library
 
 ### What I learned
 
-I wanted to use this project to learn how to write in *TypeScript*, create custom *React Hooks*, and write css using *Sass*.  There were also unexpected areas that I learned when it comes to using *React Context*.
+I wanted to use this project to learn how to write in **TypeScript**, create custom **React Hooks**, and write css using **Sass**. There were also unexpected areas that I learned when it comes to using **React Context**.
 
-
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+export function useActive(item: string, itemCompare: string): boolean {
+    if (item !== itemCompare) return false
+
+    return true
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+```css
+$breakpoint-up: (
+    'mobile': 591px,
+    'tablet': 1000px,
+);
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+@mixin breakpoint($size) {
+    @media (max-width: map-get($breakpoint-up, $size)) {
+        @content;
+    }
+}
+```
 
+```css
+/* variables */
+@use '/src/styles/vars' as *;
+@use '/src/styles/breakpoints' as *;
+
+.clockContainer {
+    display: flex;
+    direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 410px;
+    height: 410px;
+    border-radius: 50%;
+    background: $clock-linear-gradient;
+    box-shadow: $clock-box-shadow;
+    margin-top: 45px;
+    transition: all ease 0.3s;
+
+    @include breakpoint(tablet) {
+        margin-top: 109px;
+    }
+
+    @include breakpoint(mobile) {
+        width: 300px;
+        height: 300px;
+        margin-top: 48px;
+    }
+}
+```
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I want to continue to focus on a few things:
+1. sass css language and learn more about nesting, functions, and mixins.
+2. TypeScript - I learned so much in this project but I feel I have so much more to learn to become fluent.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+-   [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+-   [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+-   Website - [https://www.chrisnowicki.io](https://www.chrisnowicki.io)
+-   Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/chris-nowicki)
+-   Twitter - [@iamwix](https://www.twitter.com/iamwix)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Some credit definitely goes to ...
