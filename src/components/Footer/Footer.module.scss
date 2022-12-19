@@ -1,7 +1,17 @@
+@use '../../styles/breakpoints' as *;
+
 .footer {
     display: flex;
     justify-content: center;
     margin-top: 63px;
+
+    @include breakpoint(tablet) {
+        margin-top: 144px;
+    }
+
+    @include breakpoint(mobile) {
+        margin-top: 79px;
+    }
 
     & button {
         background-color: none;

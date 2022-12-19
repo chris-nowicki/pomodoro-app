@@ -10,10 +10,14 @@
     width: 410px;
     height: 410px;
     border-radius: 50%;
-    background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
-    box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
+    background: $clock-linear-gradient;
+    box-shadow: $clock-box-shadow;
     margin-top: 45px;
     transition: all ease 0.3s;
+
+    @include breakpoint(tablet) {
+        margin-top: 109px;
+    }
 
     @include breakpoint(mobile) {
         width: 300px;
@@ -30,8 +34,8 @@
     width: 410px;
     height: 410px;
     border-radius: 50%;
-    background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
-    box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
+    background: $clock-linear-gradient;
+    box-shadow: $clock-box-shadow;
     margin-top: 45px;
 }
 
