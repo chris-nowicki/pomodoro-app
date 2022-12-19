@@ -40,7 +40,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.png)
+![](./assets/README/screenshot-1.png)
+
+![](./assets/README/screenshot-2.png)
 
 ### Links
 
@@ -141,7 +143,7 @@ I want to continue to focus on a few things:
 ## Author
 
 -   Website - [https://www.chrisnowicki.io](https://www.chrisnowicki.io)
--   Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/chris-nowicki)
+-   Frontend Mentor - [@chris-nowicki](https://www.frontendmentor.io/profile/chris-nowicki)
 -   Twitter - [@iamwix](https://www.twitter.com/iamwix)
 
 ## Acknowledgments
