@@ -20,9 +20,9 @@ This is a solution to the [Pomodoro app challenge on Frontend Mentor](https://ww
 
 As a recent graduate from the [CodingDojo](http://www.codingdojo.com), with highest honors in **Python** & **MERN** stacks, I wanted to find projects to work on to add to my portfolio.
 
-I am loving the challenges at FrontEnd Mentor.  You are provided with the challenge, minimum requirements, and any assets needed (to include Figma with payed professional plan).  The goal is to showcase my capabilities of bringing a website/application to life using professional designs.  
+I am loving the challenges at FrontEnd Mentor. You are provided with the challenge, minimum requirements, and any assets needed (to include Figma with payed professional plan). The goal is to showcase my capabilities of bringing a website/application to life using professional designs.
 
-Although this isn't a full-stack application, I liked the challenge of creating a [Pomodoro](https://todoist.com/productivity-methods/pomodoro-technique) app as it is a productivity tool I have been using for years and I learned a lot about working with time in *JavaScript*.
+Although this isn't a full-stack application, I liked the challenge of creating a [Pomodoro](https://todoist.com/productivity-methods/pomodoro-technique) app as it is a productivity tool I have been using for years and I learned a lot about working with time in _JavaScript_.
 
 ### The challenge
 
@@ -38,7 +38,7 @@ Users should be able to:
 -   Add a reset button to reset the timer
 -   Settings save to local storage
 
-### Screenshot
+### Screenshots
 
 ![](./src/assets/README/screenshot-1.png)
 
@@ -46,14 +46,14 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
+-   Solution URL: [https://www.frontendmentor.io/solutions/pomodoro-app-kQXxT0Mjhh](https://www.frontendmentor.io/solutions/pomodoro-app-kQXxT0Mjhh)
 -   Live Site URL: [https://pomodoro.chrisnowicki.io](https://pomodoro.chriswix.com)
 
 ## My process
 
-1. Develop the look and feel of the site without the functionality of the application.  This includes the responsive design.
-3. Code the functionality of the application
-4. Refactor code into reusable components as either javascript utilities (*helper files*) or custom React Hooks.
+1. Develop the look and feel of the site without the functionality of the application. This includes the responsive design.
+2. Code the functionality of the application
+3. Refactor code into reusable components as either javascript utilities (_helper files_) or custom React Hooks.
 
 ### Built with
 
@@ -134,7 +134,7 @@ I want to continue to focus on a few things:
 
 Additional Features I'd like to add into this project:
 [] - Create functionality to have the user select an option in settings to automatically have the short/long breaks start.
-[] - Create functionally to have the user choose how many pomodoro rotations until a long break occurs.  Typically 4 is used by default.
+[] - Create functionally to have the user choose how many pomodoro rotations until a long break occurs. Typically 4 is used by default.
 
 ### Useful resources
 
