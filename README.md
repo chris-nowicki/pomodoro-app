@@ -133,9 +133,8 @@ I want to continue to focus on a few things:
 2. TypeScript - I learned so much in this project but I feel I have so much more to learn to become fluent.
 
 Additional Features I'd like to add into this project:
-
-[] - Create functionality to have the user select an option in settings to automatically have the short/long breaks start.
-[] - Create functionally to have the user choose how many pomodoro rotations until a long break occurs. Typically 4 is used by default.
+-[] - Create functionality to have the user select an option in settings to automatically have the short/long breaks start.
+-[] - Create functionally to have the user choose how many pomodoro rotations until a long break occurs. Typically 4 is used by default.
 
 ### Useful resources
 
